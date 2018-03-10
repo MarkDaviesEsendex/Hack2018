@@ -12,6 +12,6 @@ namespace Esendexers.HomelessWays.Inputs
         public string Longitude { get; set; }
         public DateTime Time { get; set; }
         public string Description { get; set; }
-        public Stream ImageStream { get; set; }
+        public string ImageName { get; set; }
     }
 }

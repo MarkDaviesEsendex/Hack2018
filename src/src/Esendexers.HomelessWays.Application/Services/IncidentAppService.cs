@@ -46,9 +46,7 @@ namespace Esendexers.HomelessWays.Services
                     ? _tagRepository.InsertAndGetId(new Tag {Name = phrase})
                     : databasePhrase.Id).ToList();
 
-            var id = _imageRepository.InsertAndGetId(new Image {ImagePath = "here"});
-            incident.ImageId = id;
-
+            incident.ImageId = _imageRepository.InsertAndGetId(new Image { ImagePath = incidentRequest.ImageName });
             var incidentId = _incidentRepository.InsertAndGetId(incident);
 
             foreach (var incidentTag in incidentTags)
