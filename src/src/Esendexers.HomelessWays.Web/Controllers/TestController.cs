@@ -4,6 +4,8 @@ using System.Threading.Tasks;
 using Esendexers.HomelessWays.Inputs;
 using Esendexers.HomelessWays.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.File;
 
 namespace Esendexers.HomelessWays.Web.Controllers
 {
@@ -25,10 +27,20 @@ namespace Esendexers.HomelessWays.Web.Controllers
 
         public async Task<IActionResult> Image(string imageLocation)
         {
-            var imageBytes = GetImageAsByteArray(imageLocation);
-            var response = await _imageAnalysis.Main(imageBytes);
+            var imageName = Guid.NewGuid().ToString();
+            var filStream = System.IO.File.Open(imageLocation, FileMode.Open);
 
-                //            _imageAnalysis.Main()
+            var storageAccount = CloudStorageAccount.Parse(
+                "DefaultEndpointsProtocol=https;AccountName=citysaves;AccountKey=Uk3eaRSJ9LW7+YCJ9d2qWwKjePIPAQsmhLvIOkN0BqTTC4pHrU6tebPDBhFGb0KFnyIMS9pHm3z+IjRkk7RAkw==");
+
+            var fileClient = storageAccount.CreateCloudFileClient();
+            var share = fileClient.GetShareReference("citysaves");
+            var rootDirectory = share.GetRootDirectoryReference();
+            var imageDirectory = rootDirectory.GetDirectoryReference("Images");
+            var file = imageDirectory.GetFileReference(imageName);
+
+            await file.UploadFromStreamAsync(filStream, AccessCondition.GenerateEmptyCondition(),
+                new FileRequestOptions(), new OperationContext());
             return Ok(true);
         }
 
