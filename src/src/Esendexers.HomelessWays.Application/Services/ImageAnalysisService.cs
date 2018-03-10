@@ -5,7 +5,12 @@ using Newtonsoft.Json;
 
 namespace Esendexers.HomelessWays.Services
 {
-    public class ImageAnalysisService
+    public interface IImageAnalysisService
+    {
+        Task<ImageAnalysisResult> Main(byte[] imageBytes);
+    }
+
+    public class ImageAnalysisService : HomelessWaysAppServiceBase, IImageAnalysisService
     {
         private const string SubscriptionKey = "63cde587f23a4085bb077d4627384733";
         private const string UriBase = "https://westcentralus.api.cognitive.microsoft.com/vision/v1.0/analyze";
