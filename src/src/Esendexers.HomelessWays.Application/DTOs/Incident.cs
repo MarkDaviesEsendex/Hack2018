@@ -8,8 +8,9 @@ namespace Esendexers.HomelessWays.DTOs
     [AutoMapTo(typeof(Incident))]
     public class IncidentDto
     {
-        public string Latitude { get; set; }
-        public string Longitude { get; set; }
+        public int Id { get; set; }
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
         public DateTime Time { get; set; }
         public string Description { get; set; }
         public double PositivitySentimentScore { get; set; }

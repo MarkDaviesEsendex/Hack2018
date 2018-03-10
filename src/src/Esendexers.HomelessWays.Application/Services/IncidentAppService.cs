@@ -15,6 +15,8 @@ namespace Esendexers.HomelessWays.Services
         bool RecordNewIncident(CreateIncidentInput incidentRequest);
         Task<IEnumerable<IncidentDto>> GetIncidentsAroundLocation(double latitude, double longitude, uint radius);
 
+        Task<IEnumerable<IncidentDto>> GetIncidentsAroundLocationWithTag(double latitude, double longitude, uint radius, string tag);
+        Task<IEnumerable<IncidentDto>> GetIncidentsWithTag(string tag);
     }
 
     public class IncidentAppService : HomelessWaysAppServiceBase, IIncidentAppService
@@ -70,6 +72,32 @@ namespace Esendexers.HomelessWays.Services
                 .Where(i => i != null)
                 .ToList();
         }
+
+        public async Task<IEnumerable<IncidentDto>> GetIncidentsAroundLocationWithTag(double latitude, double longitude, uint radius, string tag)
+        {
+            var nearbyIncidents = await GetIncidentsAroundLocation(latitude, longitude, radius);
+            var tagsWithNameIds = (await _tagRepository.GetAllListAsync()).Where(dbTag => dbTag.Name == tag).Select(dbTag => dbTag.Id);
+
+            var incidentTags = (await _incidentTagRepository.GetAllListAsync()).Where(incidentTag =>
+                tagsWithNameIds.Any(i => i == incidentTag.TagId) &&
+                nearbyIncidents.Any(dto => dto.Id == incidentTag.IncidentId));
+
+            return nearbyIncidents.Where(dto => incidentTags.Any(incidentTag => incidentTag.IncidentId == dto.Id));
+        }
+
+        public async Task<IEnumerable<IncidentDto>> GetIncidentsWithTag(string tag)
+        {
+            var incidents = ObjectMapper.Map<List<IncidentDto>>(await _incidentRepository.GetAllListAsync());
+
+            var tagsWithNameIds = (await _tagRepository.GetAllListAsync()).Where(dbTag => dbTag.Name == tag).Select(dbTag => dbTag.Id);
+
+            var incidentTags = (await _incidentTagRepository.GetAllListAsync()).Where(incidentTag =>
+                tagsWithNameIds.Any(i => i == incidentTag.TagId) &&
+                incidents.Any(dto => dto.Id == incidentTag.IncidentId));
+
+            return incidents.Where(dto => incidentTags.Any(incidentTag => incidentTag.IncidentId == dto.Id));
+        }
+
 
         private IncidentDto Map(Incident incident, uint radius, GeoCoordinate currentCoordinate)
         {
