@@ -5,8 +5,7 @@ import { GeolocationProvider } from '../../providers/geolocation/geolocation';
 
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html',
-  styleUrls : ['home.scss']
+  templateUrl: 'home.html'
 })
 export class HomePage {
   latitude: number;
