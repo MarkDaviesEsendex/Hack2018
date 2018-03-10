@@ -13,6 +13,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { ImageProvider } from '../providers/image/image';
 import { GeolocationProvider } from '../providers/geolocation/geolocation';
 import { IncidentHttpProvider } from '../providers/incident-http/incident-http';
+import { SpinnerProvider } from '../providers/spinner/spinner';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { IncidentHttpProvider } from '../providers/incident-http/incident-http';
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     ImageProvider,
     GeolocationProvider,
-    IncidentHttpProvider
+    IncidentHttpProvider,
+    SpinnerProvider
   ]
 })
 export class AppModule { }

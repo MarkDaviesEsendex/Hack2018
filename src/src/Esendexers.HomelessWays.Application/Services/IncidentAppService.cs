@@ -1,17 +1,20 @@
 ﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+using System.Threading.Tasks;
 using Abp.Domain.Repositories;
 using Abp.ObjectMapping;
-using AutoMapper.Configuration.Conventions;
+using Esendexers.HomelessWays.DTOs;
 using Esendexers.HomelessWays.Entities;
 using Esendexers.HomelessWays.Inputs;
+using GeoCoordinatePortable;
 
 namespace Esendexers.HomelessWays.Services
 {
     public interface IIncidentAppService
     {
         bool RecordNewIncident(CreateIncidentInput incidentRequest);
+        Task<IEnumerable<IncidentDto>> GetIncidentsAroundLocation(double latitude, double longitude, uint radius);
+
     }
 
     public class IncidentAppService : HomelessWaysAppServiceBase, IIncidentAppService
@@ -54,6 +57,25 @@ namespace Esendexers.HomelessWays.Services
                 _incidentTagRepository.Insert(new IncidentTag{IncidentId = incidentId, TagId = incidentTag });
             }
             return true;
+        }
+
+        public async Task<IEnumerable<IncidentDto>> GetIncidentsAroundLocation(double latitude, double longitude, uint radius)
+        {
+            var currentCoordinate = new GeoCoordinate(latitude, longitude);
+
+            var incidents = await _incidentRepository.GetAllListAsync();
+
+            return incidents.ToList()
+                .Select(i => Map(i, radius, currentCoordinate))
+                .Where(i => i != null)
+                .ToList();
+        }
+
+        private IncidentDto Map(Incident incident, uint radius, GeoCoordinate currentCoordinate)
+        {
+            var incidentCoordinate = new GeoCoordinate(double.Parse(incident.Latitude), double.Parse(incident.Longitude));
+
+            return currentCoordinate.GetDistanceTo(incidentCoordinate) < radius ? _objectMapper.Map<IncidentDto>(incident) : null;
         }
     }
 }

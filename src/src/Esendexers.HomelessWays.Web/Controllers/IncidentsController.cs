@@ -8,20 +8,17 @@ namespace Esendexers.HomelessWays.Web.Controllers
 {
     public class IncidentsController : HomelessWaysControllerBase
     {
-        private readonly IIncidentService _incidentService;
+        private readonly IIncidentAppService _incidentAppService;
 
-        private readonly IObjectMapper _objectMapper;
-
-        public IncidentsController(IIncidentService incidentService, IObjectMapper objectMapper)
+        public IncidentsController(IIncidentAppService incidentAppService)
         {
-            _incidentService = incidentService;
-            _objectMapper = objectMapper;
+            _incidentAppService = incidentAppService;
         }
 
         [HttpGet]
-        public async Task<IActionResult> IncidentsNearby(Coordinates currentLocation, uint radius)
+        public async Task<IActionResult> NearbyIncidents(double latitude, double longitude, uint radius)
         {
-            var incidents = await _incidentService.GetIncidentsAroundLocation(_objectMapper.Map<HomelessWays.Models.Coordinates>(currentLocation), radius);
+            var incidents = await _incidentAppService.GetIncidentsAroundLocation(latitude, longitude, radius);
 
             return Ok(incidents);
         }
