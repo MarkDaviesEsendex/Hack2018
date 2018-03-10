@@ -11,7 +11,7 @@ export class HomePage {
   latitude: number;
   longitude: number;
   imageBase64: string;
-  description : string;
+  description: string;
 
   constructor(public navCtrl: NavController, private imageProvider: ImageProvider, private geolocator: GeolocationProvider) { }
 
@@ -22,5 +22,9 @@ export class HomePage {
     this.imageBase64 = await this.imageProvider.takePicture();
     console.log(`[CORDOVA] ${this.latitude}, ${this.longitude}`);
     console.log(`[CORDOVA] ${this.imageBase64}`);
+    }
+
+  displaySubmit() {
+    return this.imageBase64 || (this.description && this.description.length > 0);
   }
 }

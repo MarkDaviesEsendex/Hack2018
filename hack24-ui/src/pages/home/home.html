@@ -8,12 +8,11 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    Welcome to HomelessWays!
-  </p>
-  <img *ngIf="imageBase64" [src]="imageBase64" class="rotate90">
-  <textarea [(ngModel)]="description"></textarea>
-  <button ion-button secondary (click)="takePicture()">Take a picture</button>
+  <h3>Welcome to HomelessWays!</h3>
+  <div>
+    <img *ngIf="imageBase64" [src]="imageBase64" class="rotate90">
+    <textarea [(ngModel)]="description"></textarea>
+    <button ion-button secondary (click)="takePicture()">Take a picture</button>
+    <button ion-button secondary *ngIf="displaySubmit()">Submit</button>
+  </div>
 </ion-content>
