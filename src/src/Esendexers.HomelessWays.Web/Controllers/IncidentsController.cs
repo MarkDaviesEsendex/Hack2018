@@ -1,4 +1,5 @@
-﻿using Abp.ObjectMapping;
+﻿using System.Threading.Tasks;
+using Abp.ObjectMapping;
 using Esendexers.HomelessWays.Services;
 using Esendexers.HomelessWays.Web.Models.Incidents;
 using Microsoft.AspNetCore.Mvc;
@@ -18,11 +19,11 @@ namespace Esendexers.HomelessWays.Web.Controllers
         }
 
         [HttpGet]
-        public IActionResult IncidentsNearby(Coordinates currentLocation, uint radius)
+        public async Task<IActionResult> IncidentsNearby(Coordinates currentLocation, uint radius)
         {
-            _incidentService.GetIncidentsAroundLocation(_objectMapper.Map<HomelessWays.Models.Coordinates>(currentLocation), radius);
+            var incidents = await _incidentService.GetIncidentsAroundLocation(_objectMapper.Map<HomelessWays.Models.Coordinates>(currentLocation), radius);
 
-            return Ok(true);
+            return Ok(incidents);
         }
     }
 }
