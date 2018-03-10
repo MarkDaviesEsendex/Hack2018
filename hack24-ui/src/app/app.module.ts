@@ -14,7 +14,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { ImageProvider } from '../providers/image/image';
 import { GeolocationProvider } from '../providers/geolocation/geolocation';
 import { IncidentHttpProvider } from '../providers/incident-http/incident-http';
-import { SpinnerProvider } from '../providers/spinner/spinner';
+import { HttpClientModule } from '@angular/common/http';
+import { GoogleMapsProvider } from '../providers/google-maps/google-maps';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { SpinnerProvider } from '../providers/spinner/spinner';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    HttpClientModule
 
   ],
   bootstrap: [IonicApp],
@@ -42,8 +44,8 @@ import { SpinnerProvider } from '../providers/spinner/spinner';
     ImageProvider,
     GeolocationProvider,
     IncidentHttpProvider,
-    SpinnerProvider,
-    GoogleMaps
+    GoogleMaps,
+    GoogleMapsProvider
   ]
 })
 export class AppModule { }
