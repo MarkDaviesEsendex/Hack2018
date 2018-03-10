@@ -15,6 +15,7 @@
     <RootNamespace>Esendexers.HomelessWays</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Esendexers.HomelessWays.Application\Esendexers.HomelessWays.Application.csproj" />
     <ProjectReference Include="..\Esendexers.HomelessWays.Core\Esendexers.HomelessWays.Core.csproj" />
   </ItemGroup>
   <ItemGroup>

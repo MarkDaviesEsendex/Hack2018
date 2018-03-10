@@ -16,6 +16,8 @@
   <ItemGroup>
     <PackageReference Include="Abp.EntityFrameworkCore" Version="3.4.0" />
     <PackageReference Include="Abp.AutoMapper" Version="3.4.0" />
+    <PackageReference Include="GeoCoordinate.NetCore" Version="1.0.0.1" />
     <PackageReference Include="Microsoft.Azure.CognitiveServices.Language" Version="1.0.0-preview" />
+    <PackageReference Include="Microsoft.Spatial" Version="7.4.1" />
   </ItemGroup>
 </Project>
