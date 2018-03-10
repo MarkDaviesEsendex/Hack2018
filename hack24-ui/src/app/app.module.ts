@@ -15,6 +15,7 @@ import { ImageProvider } from '../providers/image/image';
 import { GeolocationProvider } from '../providers/geolocation/geolocation';
 import { IncidentHttpProvider } from '../providers/incident-http/incident-http';
 import { SpinnerProvider } from '../providers/spinner/spinner';
+import { GoogleMapsProvider } from '../providers/google-maps/google-maps';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { SpinnerProvider } from '../providers/spinner/spinner';
     GeolocationProvider,
     IncidentHttpProvider,
     SpinnerProvider,
-    GoogleMaps
+    GoogleMaps,
+    GoogleMapsProvider
   ]
 })
 export class AppModule { }
