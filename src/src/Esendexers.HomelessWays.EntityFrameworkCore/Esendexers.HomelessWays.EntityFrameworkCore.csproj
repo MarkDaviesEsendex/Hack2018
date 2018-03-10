@@ -15,6 +15,10 @@
     <RootNamespace>Esendexers.HomelessWays</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="Migrations\20180310142442_Adding virtual.cs" />
+    <Compile Remove="Migrations\20180310154801_Initial.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Esendexers.HomelessWays.Core\Esendexers.HomelessWays.Core.csproj" />
   </ItemGroup>
   <ItemGroup>

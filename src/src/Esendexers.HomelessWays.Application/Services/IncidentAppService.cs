@@ -43,16 +43,17 @@ namespace Esendexers.HomelessWays.Services
             var incidentTags = (from phrase in phrases
                 let databasePhrase = _tagRepository.GetAll().FirstOrDefault(tag => tag.Name == phrase)
                 select databasePhrase == null
-                    ? _tagRepository.Insert(new Tag {Name = phrase})
-                    : databasePhrase).ToList();
-            var image = _imageRepository.Insert(new Image { });
-            incident.ImageId = image.Id;
+                    ? _tagRepository.InsertAndGetId(new Tag {Name = phrase})
+                    : databasePhrase.Id).ToList();
 
-            incident = _incidentRepository.Insert(incident);
+            var id = _imageRepository.InsertAndGetId(new Image {ImagePath = "here"});
+            incident.ImageId = id;
+
+            var incidentId = _incidentRepository.InsertAndGetId(incident);
 
             foreach (var incidentTag in incidentTags)
             {
-                _incidentTagRepository.Insert(new IncidentTag{IncidentId = incident.Id, TagId = incidentTag.Id});
+                _incidentTagRepository.Insert(new IncidentTag{IncidentId = incidentId, TagId = incidentTag });
             }
             return true;
         }
