@@ -1,12 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
+using Abp.Domain.Entities;
 
 namespace Esendexers.HomelessWays.Entities
 {
-    public class IncidentTag
+    public class IncidentTag : Entity
     {
         [ForeignKey("IncidentId")]
-        public uint IncidentId { get; set; }
+        public int IncidentId { get; set; }
         [ForeignKey("TagId")]
-        public uint TagId { get; set; }
+        public int TagId { get; set; }
     }
 }

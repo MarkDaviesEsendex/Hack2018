@@ -2,7 +2,7 @@
 
 namespace Esendexers.HomelessWays.Entities
 {
-    public class Tag : Entity<uint>
+    public class Tag : Entity
     {
         public string Name { get; set; }
     }

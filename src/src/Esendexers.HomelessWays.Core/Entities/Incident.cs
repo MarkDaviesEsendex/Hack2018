@@ -4,7 +4,7 @@ using Abp.Domain.Entities;
 
 namespace Esendexers.HomelessWays.Entities
 {
-    public class Incident : Entity<uint>
+    public class Incident : Entity
     {
         public string Latitude { get; set; }
         public string Longitude { get; set; }
