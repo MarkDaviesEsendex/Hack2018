@@ -1,59 +1,50 @@
-using System;
-using Castle.MicroKernel.Registration;
-using NSubstitute;
-using Abp.AutoMapper;
-using Abp.Dependency;
+using System.Reflection;
 using Abp.Modules;
-using Abp.Configuration.Startup;
-using Abp.Net.Mail;
+using Abp.Reflection.Extensions;
 using Abp.TestBase;
-using Abp.Zero.Configuration;
-using Abp.Zero.EntityFrameworkCore;
 using Esendexers.HomelessWays.EntityFrameworkCore;
-using Esendexers.HomelessWays.Tests.DependencyInjection;
+using Castle.MicroKernel.Registration;
+using Castle.Windsor.MsDependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Esendexers.HomelessWays.Tests
 {
     [DependsOn(
         typeof(HomelessWaysApplicationModule),
-        typeof(HomelessWaysEntityFrameworkModule),
+        typeof(HomelessWaysEntityFrameworkCoreModule),
         typeof(AbpTestBaseModule)
         )]
     public class HomelessWaysTestModule : AbpModule
     {
-        public HomelessWaysTestModule(HomelessWaysEntityFrameworkModule abpProjectNameEntityFrameworkModule)
-        {
-            abpProjectNameEntityFrameworkModule.SkipDbContextRegistration = true;
-        }
-
         public override void PreInitialize()
         {
-            Configuration.UnitOfWork.Timeout = TimeSpan.FromMinutes(30);
-            Configuration.UnitOfWork.IsTransactional = false;
-
-            // Disable static mapper usage since it breaks unit tests (see https://github.com/aspnetboilerplate/aspnetboilerplate/issues/2052)
-            Configuration.Modules.AbpAutoMapper().UseStaticMapper = false;
-
-            Configuration.BackgroundJobs.IsJobExecutionEnabled = false;
-
-            // Use database for language management
-            Configuration.Modules.Zero().LanguageManagement.EnableDbLocalization();
-
-            RegisterFakeService<AbpZeroDbMigrator<HomelessWaysDbContext>>();
-
-            Configuration.ReplaceService<IEmailSender, NullEmailSender>(DependencyLifeStyle.Transient);
+            Configuration.UnitOfWork.IsTransactional = false; //EF Core InMemory DB does not support transactions.
+            SetupInMemoryDb();
         }
 
         public override void Initialize()
         {
-            ServiceCollectionRegistrar.Register(IocManager);
+            IocManager.RegisterAssemblyByConvention(typeof(HomelessWaysTestModule).GetAssembly());
         }
 
-        private void RegisterFakeService<TService>() where TService : class
+        private void SetupInMemoryDb()
         {
+            var services = new ServiceCollection()
+                .AddEntityFrameworkInMemoryDatabase();
+
+            var serviceProvider = WindsorRegistrationHelper.CreateServiceProvider(
+                IocManager.IocContainer,
+                services
+            );
+
+            var builder = new DbContextOptionsBuilder<HomelessWaysDbContext>();
+            builder.UseInMemoryDatabase().UseInternalServiceProvider(serviceProvider);
+
             IocManager.IocContainer.Register(
-                Component.For<TService>()
-                    .UsingFactoryMethod(() => Substitute.For<TService>())
+                Component
+                    .For<DbContextOptions<HomelessWaysDbContext>>()
+                    .Instance(builder.Options)
                     .LifestyleSingleton()
             );
         }

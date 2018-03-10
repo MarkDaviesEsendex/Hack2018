@@ -1,18 +1,16 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Abp.Zero.EntityFrameworkCore;
-using Esendexers.HomelessWays.Authorization.Roles;
-using Esendexers.HomelessWays.Authorization.Users;
-using Esendexers.HomelessWays.MultiTenancy;
+﻿using Abp.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace Esendexers.HomelessWays.EntityFrameworkCore
 {
-    public class HomelessWaysDbContext : AbpZeroDbContext<Tenant, Role, User, HomelessWaysDbContext>
+    public class HomelessWaysDbContext : AbpDbContext
     {
-        /* Define a DbSet for each entity of the application */
-        
-        public HomelessWaysDbContext(DbContextOptions<HomelessWaysDbContext> options)
+        //Add DbSet properties for your entities...
+
+        public HomelessWaysDbContext(DbContextOptions<HomelessWaysDbContext> options) 
             : base(options)
         {
+
         }
     }
 }

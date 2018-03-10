@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using Abp.Reflection.Extensions;
 
 namespace Esendexers.HomelessWays.Web
 {
@@ -13,7 +12,7 @@ namespace Esendexers.HomelessWays.Web
     {
         public static string CalculateContentRootFolder()
         {
-            var coreAssemblyDirectoryPath = Path.GetDirectoryName(typeof(HomelessWaysCoreModule).GetAssembly().Location);
+            var coreAssemblyDirectoryPath = Path.GetDirectoryName(AppContext.BaseDirectory);
             if (coreAssemblyDirectoryPath == null)
             {
                 throw new Exception("Could not find location of Esendexers.HomelessWays.Core assembly!");
@@ -30,19 +29,7 @@ namespace Esendexers.HomelessWays.Web
                 directoryInfo = directoryInfo.Parent;
             }
 
-            var webMvcFolder = Path.Combine(directoryInfo.FullName, "src", "Esendexers.HomelessWays.Web.Mvc");
-            if (Directory.Exists(webMvcFolder))
-            {
-                return webMvcFolder;
-            }
-
-            var webHostFolder = Path.Combine(directoryInfo.FullName, "src", "Esendexers.HomelessWays.Web.Host");
-            if (Directory.Exists(webHostFolder))
-            {
-                return webHostFolder;
-            }
-
-            throw new Exception("Could not find root folder of the web project!");
+            return Path.Combine(directoryInfo.FullName, $"src{Path.DirectorySeparatorChar}Esendexers.HomelessWays.Web");
         }
 
         private static bool DirectoryContains(string directory, string fileName)

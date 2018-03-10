@@ -1,29 +1,28 @@
 ﻿using System.Collections.Concurrent;
-using Microsoft.Extensions.Configuration;
 using Abp.Extensions;
-using Abp.Reflection.Extensions;
+using Microsoft.Extensions.Configuration;
 
 namespace Esendexers.HomelessWays.Configuration
 {
     public static class AppConfigurations
     {
-        private static readonly ConcurrentDictionary<string, IConfigurationRoot> _configurationCache;
+        private static readonly ConcurrentDictionary<string, IConfigurationRoot> ConfigurationCache;
 
         static AppConfigurations()
         {
-            _configurationCache = new ConcurrentDictionary<string, IConfigurationRoot>();
+            ConfigurationCache = new ConcurrentDictionary<string, IConfigurationRoot>();
         }
 
-        public static IConfigurationRoot Get(string path, string environmentName = null, bool addUserSecrets = false)
+        public static IConfigurationRoot Get(string path, string environmentName = null)
         {
-            var cacheKey = path + "#" + environmentName + "#" + addUserSecrets;
-            return _configurationCache.GetOrAdd(
+            var cacheKey = path + "#" + environmentName;
+            return ConfigurationCache.GetOrAdd(
                 cacheKey,
-                _ => BuildConfiguration(path, environmentName, addUserSecrets)
+                _ => BuildConfiguration(path, environmentName)
             );
         }
 
-        private static IConfigurationRoot BuildConfiguration(string path, string environmentName = null, bool addUserSecrets = false)
+        private static IConfigurationRoot BuildConfiguration(string path, string environmentName = null)
         {
             var builder = new ConfigurationBuilder()
                 .SetBasePath(path)
@@ -33,13 +32,8 @@ namespace Esendexers.HomelessWays.Configuration
             {
                 builder = builder.AddJsonFile($"appsettings.{environmentName}.json", optional: true);
             }
-
+            
             builder = builder.AddEnvironmentVariables();
-
-            if (addUserSecrets)
-            {
-                builder.AddUserSecrets(typeof(AppConfigurations).GetAssembly());
-            }
 
             return builder.Build();
         }
