@@ -2,10 +2,10 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { Camera, CameraOptions } from '@ionic-native/camera';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import {SpinnerProvider} from '../providers/spinner/spinner';
 
 @Component({
   templateUrl: 'app.html'
@@ -14,10 +14,11 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   rootPage: any = HomePage;
+  isSpin : boolean;
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, private camera: Camera) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, private spinner: SpinnerProvider) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
@@ -26,6 +27,7 @@ export class MyApp {
       { title: 'List', component: ListPage }
     ];
 
+    this.spinner.status.subscribe(s => this.isSpin = s);
   }
 
   initializeApp() {
