@@ -3,6 +3,7 @@ using Esendexers.HomelessWays.Inputs;
 using Esendexers.HomelessWays.Services;
 using Esendexers.HomelessWays.Web.Models.Submit;
 using Microsoft.AspNetCore.Mvc;
+using SixLabors.ImageSharp;
 
 namespace Esendexers.HomelessWays.Web.Controllers
 {
@@ -18,14 +19,17 @@ namespace Esendexers.HomelessWays.Web.Controllers
         [HttpPost]
         public IActionResult RecordIncident(IncidentModel incident)
         {
+            var imageName = Guid.NewGuid().ToString();
+            var imageBytes = Convert.FromBase64String(incident.IncidentImage);
+
             var newIncidentInput = new CreateIncidentInput
             {
                 Description = incident.Description,
                 Longitude = incident.Longitude,
                 Latitude = incident.Latitude,
                 Time = DateTime.Now,
+                ImageName = imageName
             };
-            incident.IncidentImage.CopyTo(newIncidentInput.ImageStream);
             return Ok(_incidentAppService.RecordNewIncident(newIncidentInput));
         }
     }
