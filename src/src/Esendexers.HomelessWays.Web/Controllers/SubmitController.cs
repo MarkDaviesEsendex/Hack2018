@@ -15,13 +15,15 @@ namespace Esendexers.HomelessWays.Web.Controllers
 {
     public class SubmitController : HomelessWaysControllerBase
     {
+        private readonly IImageStorageService _imageStorageService;
         private readonly IIncidentAppService _incidentAppService;
         private readonly ILogger _logger;
 
-        public SubmitController(IIncidentAppService incidentAppService, ILogger logger)
+        public SubmitController(IIncidentAppService incidentAppService, ILogger logger, IImageStorageService imageStorageService)
         {
             _incidentAppService = incidentAppService;
             _logger = logger;
+            _imageStorageService = imageStorageService;
         }
 
         [HttpPost]
@@ -30,19 +32,7 @@ namespace Esendexers.HomelessWays.Web.Controllers
             var imageName = $"{Guid.NewGuid().ToString()}.jpg";
             var imageBytes = Convert.FromBase64String(incident.Image);
 
-            var storageAccount = CloudStorageAccount.Parse(
-                "DefaultEndpointsProtocol=https;AccountName=citysaves;AccountKey=Uk3eaRSJ9LW7+YCJ9d2qWwKjePIPAQsmhLvIOkN0BqTTC4pHrU6tebPDBhFGb0KFnyIMS9pHm3z+IjRkk7RAkw==");
-
-            var fileClient = storageAccount.CreateCloudFileClient();
-            var share = fileClient.GetShareReference("citysaves");
-            var rootDirectory = share.GetRootDirectoryReference();
-            var imageDirectory = rootDirectory.GetDirectoryReference("Images");
-            var file = imageDirectory.GetFileReference(imageName);
-
-            await file.UploadFromStreamAsync(new MemoryStream(imageBytes), AccessCondition.GenerateEmptyCondition(),
-                new FileRequestOptions(), new OperationContext());
-
-            _logger.Info(JsonConvert.SerializeObject(incident));
+            await _imageStorageService.UploadImageBytes(imageName, imageBytes);
 
             var newIncidentInput = new CreateIncidentInput
             {
