@@ -6,8 +6,8 @@ namespace Esendexers.HomelessWays.Entities
     public class IncidentTag : Entity
     {
         [ForeignKey("IncidentId")]
-        public int IncidentId { get; set; }
+        public virtual int IncidentId { get; set; }
         [ForeignKey("TagId")]
-        public int TagId { get; set; }
+        public virtual int TagId { get; set; }
     }
 }

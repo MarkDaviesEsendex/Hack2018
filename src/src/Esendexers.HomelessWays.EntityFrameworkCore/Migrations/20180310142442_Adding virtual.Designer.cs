@@ -11,9 +11,10 @@ using System;
 namespace Esendexers.HomelessWays.Migrations
 {
     [DbContext(typeof(HomelessWaysDbContext))]
-    partial class HomelessWaysDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180310142442_Adding virtual")]
+    partial class Addingvirtual
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
