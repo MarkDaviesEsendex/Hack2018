@@ -2044,3 +2044,214 @@ DEBUG 2018-03-10 17:01:28,975 [1    ] Abp.Localization.LocalizationManager     -
 DEBUG 2018-03-10 17:01:29,152 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
 DEBUG 2018-03-10 17:01:29,198 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 1 classes define auto mapping attributes
 DEBUG 2018-03-10 17:01:29,198 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.Inputs.CreateIncidentInput
+DEBUG 2018-03-10 17:35:28,896 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-03-10 17:35:35,137 [1    ] Abp.Modules.AbpModuleManager             - Found 10 ABP modules in total.
+DEBUG 2018-03-10 17:35:35,170 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.Web.Startup.HomelessWaysWebModule, Esendexers.HomelessWays.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-10 17:35:35,177 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.HomelessWaysApplicationModule, Esendexers.HomelessWays.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-10 17:35:35,178 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.HomelessWaysCoreModule, Esendexers.HomelessWays.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-10 17:35:35,179 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-10 17:35:35,180 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-10 17:35:35,180 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.EntityFrameworkCore.HomelessWaysEntityFrameworkCoreModule, Esendexers.HomelessWays.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-10 17:35:35,181 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-10 17:35:35,181 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-10 17:35:35,182 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-10 17:35:35,182 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-10 17:35:35,190 [1    ] Abp.Modules.AbpModuleManager             - 10 modules loaded.
+DEBUG 2018-03-10 17:35:35,360 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: Esendexers.HomelessWays.EntityFrameworkCore.HomelessWaysDbContext, Esendexers.HomelessWays.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-10 17:35:35,438 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-03-10 17:35:35,449 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-03-10 17:35:35,607 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: HomelessWays
+DEBUG 2018-03-10 17:35:35,609 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-03-10 17:35:35,782 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-03-10 17:35:35,827 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 3 classes define auto mapping attributes
+DEBUG 2018-03-10 17:35:35,827 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.Inputs.CreateIncidentInput
+DEBUG 2018-03-10 17:35:35,831 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.DTOs.IncidentDto
+DEBUG 2018-03-10 17:35:35,831 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.Web.Models.Incidents.Coordinates
+INFO  2018-03-10 17:35:36,257 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/  
+WARN  2018-03-10 17:35:36,315 [11   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-03-10 17:35:36,331 [11   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-03-10 17:35:36,514 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Esendexers.HomelessWays.Web.Controllers.HomeController.Index (Esendexers.HomelessWays.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-03-10 17:35:36,534 [11   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Web.Controllers.HomeController.Index is executed by an anonymous user in 44 ms from ::1 IP address with succeed.
+INFO  2018-03-10 17:35:38,761 [11   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+INFO  2018-03-10 17:35:39,633 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Esendexers.HomelessWays.Web.Controllers.HomeController.Index (Esendexers.HomelessWays.Web) in 3177.8554ms
+INFO  2018-03-10 17:35:39,638 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3393.7446ms 200 text/html; charset=utf-8
+INFO  2018-03-10 17:35:39,651 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/bootstrap-paper/bootstrap.css  
+INFO  2018-03-10 17:35:39,655 [12   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/bootstrap-paper/bootstrap.css was not modified
+INFO  2018-03-10 17:35:39,659 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 8.1255ms 304 text/css
+INFO  2018-03-10 17:35:39,659 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/toastr/toastr.css  
+INFO  2018-03-10 17:35:39,659 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/famfamfam-flags/dist/sprite/famfamfam-flags.css  
+INFO  2018-03-10 17:35:39,660 [22   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/toastr/toastr.css was not modified
+INFO  2018-03-10 17:35:39,660 [23   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/css/main.css  
+INFO  2018-03-10 17:35:39,660 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.3445ms 304 text/css
+INFO  2018-03-10 17:35:39,661 [12   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/famfamfam-flags/dist/sprite/famfamfam-flags.css was not modified
+INFO  2018-03-10 17:35:39,661 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.5443ms 304 text/css
+INFO  2018-03-10 17:35:39,661 [23   ] NetCore.StaticFiles.StaticFileMiddleware - The file /css/main.css was not modified
+INFO  2018-03-10 17:35:39,661 [23   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.9752ms 304 text/css
+INFO  2018-03-10 17:35:39,664 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/sweetalert/dist/sweetalert.css  
+INFO  2018-03-10 17:35:39,667 [22   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/sweetalert/dist/sweetalert.css was not modified
+INFO  2018-03-10 17:35:39,668 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3.4537ms 304 text/css
+INFO  2018-03-10 17:35:39,675 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/font-awesome/css/font-awesome.css  
+INFO  2018-03-10 17:35:39,676 [12   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/font-awesome/css/font-awesome.css was not modified
+INFO  2018-03-10 17:35:39,676 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.309ms 304 text/css
+INFO  2018-03-10 17:35:39,676 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/json2/json2.js  
+INFO  2018-03-10 17:35:39,676 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/bootstrap/dist/js/bootstrap.js  
+INFO  2018-03-10 17:35:39,676 [22   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/json2/json2.js was not modified
+INFO  2018-03-10 17:35:39,676 [18   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/bootstrap/dist/js/bootstrap.js was not modified
+INFO  2018-03-10 17:35:39,677 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.6203ms 304 application/javascript
+INFO  2018-03-10 17:35:39,677 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.5693ms 304 application/javascript
+INFO  2018-03-10 17:35:39,678 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/jquery-validation/dist/jquery.validate.js  
+INFO  2018-03-10 17:35:39,678 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/jquery/dist/jquery.js  
+INFO  2018-03-10 17:35:39,678 [22   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/jquery/dist/jquery.js was not modified
+INFO  2018-03-10 17:35:39,678 [12   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/jquery-validation/dist/jquery.validate.js was not modified
+INFO  2018-03-10 17:35:39,679 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.9688ms 304 application/javascript
+INFO  2018-03-10 17:35:39,679 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.0961ms 304 application/javascript
+INFO  2018-03-10 17:35:39,681 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/blockUI/jquery.blockUI.js  
+INFO  2018-03-10 17:35:39,687 [22   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/blockUI/jquery.blockUI.js was not modified
+INFO  2018-03-10 17:35:39,687 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6.224ms 304 application/javascript
+INFO  2018-03-10 17:35:39,689 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/moment/min/moment-with-locales.js  
+INFO  2018-03-10 17:35:39,689 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/toastr/toastr.js  
+INFO  2018-03-10 17:35:39,690 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/moment/min/moment-with-locales.js was not modified
+INFO  2018-03-10 17:35:39,690 [19   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/toastr/toastr.js was not modified
+INFO  2018-03-10 17:35:39,690 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.8178ms 304 application/javascript
+INFO  2018-03-10 17:35:39,690 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.8854ms 304 application/javascript
+INFO  2018-03-10 17:35:39,692 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/sweetalert/dist/sweetalert-dev.js  
+INFO  2018-03-10 17:35:39,693 [22   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/sweetalert/dist/sweetalert-dev.js was not modified
+INFO  2018-03-10 17:35:39,694 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.4042ms 304 application/javascript
+INFO  2018-03-10 17:35:39,700 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/spin.js/spin.js  
+INFO  2018-03-10 17:35:39,700 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/spin.js/jquery.spin.js  
+INFO  2018-03-10 17:35:39,701 [20   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/spin.js/jquery.spin.js was not modified
+INFO  2018-03-10 17:35:39,701 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.1565ms 304 application/javascript
+INFO  2018-03-10 17:35:39,702 [17   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/spin.js/spin.js was not modified
+INFO  2018-03-10 17:35:39,702 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.3002ms 304 application/javascript
+INFO  2018-03-10 17:35:39,706 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/abp-web-resources/Abp/Framework/scripts/abp.js  
+INFO  2018-03-10 17:35:39,706 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.blockUI.js  
+INFO  2018-03-10 17:35:39,706 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.sweet-alert.js  
+INFO  2018-03-10 17:35:39,707 [12   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/abp-web-resources/Abp/Framework/scripts/abp.js was not modified
+INFO  2018-03-10 17:35:39,707 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.8431ms 304 application/javascript
+INFO  2018-03-10 17:35:39,707 [21   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/abp-web-resources/Abp/Framework/scripts/libs/abp.sweet-alert.js was not modified
+INFO  2018-03-10 17:35:39,707 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.7049ms 304 application/javascript
+INFO  2018-03-10 17:35:39,707 [18   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/abp-web-resources/Abp/Framework/scripts/libs/abp.blockUI.js was not modified
+INFO  2018-03-10 17:35:39,707 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.2395ms 304 application/javascript
+INFO  2018-03-10 17:35:39,712 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpServiceProxies/GetAll?v=636563001396088135  
+INFO  2018-03-10 17:35:39,712 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.jquery.js  
+INFO  2018-03-10 17:35:39,714 [18   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/abp-web-resources/Abp/Framework/scripts/libs/abp.jquery.js was not modified
+INFO  2018-03-10 17:35:39,714 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.4856ms 304 application/javascript
+INFO  2018-03-10 17:35:39,716 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/js/views/home/index.js  
+INFO  2018-03-10 17:35:39,716 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.spin.js  
+INFO  2018-03-10 17:35:39,717 [19   ] NetCore.StaticFiles.StaticFileMiddleware - The file /js/views/home/index.js was not modified
+INFO  2018-03-10 17:35:39,717 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.8884ms 304 application/javascript
+INFO  2018-03-10 17:35:39,717 [18   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/abp-web-resources/Abp/Framework/scripts/libs/abp.spin.js was not modified
+INFO  2018-03-10 17:35:39,717 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.8212ms 304 application/javascript
+INFO  2018-03-10 17:35:39,718 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.toastr.js  
+INFO  2018-03-10 17:35:39,720 [18   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/abp-web-resources/Abp/Framework/scripts/libs/abp.toastr.js was not modified
+INFO  2018-03-10 17:35:39,721 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.7903ms 304 application/javascript
+INFO  2018-03-10 17:35:39,724 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpScripts/GetScripts?v=636563001396096170  
+INFO  2018-03-10 17:35:39,735 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/famfamfam-flags/dist/sprite/famfamfam-flags.png  
+INFO  2018-03-10 17:35:39,736 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/famfamfam-flags/dist/sprite/famfamfam-flags.png was not modified
+INFO  2018-03-10 17:35:39,736 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.7547ms 304 image/png
+INFO  2018-03-10 17:35:39,738 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3  
+INFO  2018-03-10 17:35:39,739 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/font-awesome/fonts/fontawesome-webfont.woff2 was not modified
+INFO  2018-03-10 17:35:39,740 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.4416ms 304 font/woff2
+INFO  2018-03-10 17:35:39,767 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - ModelState is Valid
+INFO  2018-03-10 17:35:39,788 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - ModelState is Valid
+INFO  2018-03-10 17:35:39,896 [19   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2018-03-10 17:35:39,896 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 148.5834ms
+INFO  2018-03-10 17:35:39,896 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 172.2608ms 200 application/x-javascript; charset=utf-8
+INFO  2018-03-10 17:35:39,908 [17   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2018-03-10 17:35:39,908 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 144.8994ms
+INFO  2018-03-10 17:35:39,908 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 196.4309ms 200 application/x-javascript
+INFO  2018-03-10 17:35:39,921 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/favicon.ico  
+INFO  2018-03-10 17:35:39,922 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.1738ms 404 
+INFO  2018-03-10 17:36:10,903 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/  
+INFO  2018-03-10 17:36:10,904 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Esendexers.HomelessWays.Web.Controllers.HomeController.Index (Esendexers.HomelessWays.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-03-10 17:36:10,905 [12   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Web.Controllers.HomeController.Index is executed by an anonymous user in 0 ms from ::1 IP address with succeed.
+INFO  2018-03-10 17:36:10,905 [12   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+INFO  2018-03-10 17:36:11,129 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Esendexers.HomelessWays.Web.Controllers.HomeController.Index (Esendexers.HomelessWays.Web) in 225.311ms
+INFO  2018-03-10 17:36:11,129 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 226.3044ms 200 text/html; charset=utf-8
+INFO  2018-03-10 17:36:11,153 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/bootstrap-paper/bootstrap.css  
+INFO  2018-03-10 17:36:11,155 [21   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bootstrap-paper/bootstrap.css'. Physical path: 'C:\git\Hack2018\src\src\Esendexers.HomelessWays.Web\wwwroot\lib\bootstrap-paper\bootstrap.css'
+INFO  2018-03-10 17:36:11,155 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/toastr/toastr.css  
+INFO  2018-03-10 17:36:11,157 [17   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/toastr/toastr.css'. Physical path: 'C:\git\Hack2018\src\src\Esendexers.HomelessWays.Web\wwwroot\lib\toastr\toastr.css'
+INFO  2018-03-10 17:36:11,159 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/sweetalert/dist/sweetalert.css  
+INFO  2018-03-10 17:36:11,160 [20   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/sweetalert/dist/sweetalert.css'. Physical path: 'C:\git\Hack2018\src\src\Esendexers.HomelessWays.Web\wwwroot\lib\sweetalert\dist\sweetalert.css'
+INFO  2018-03-10 17:36:11,161 [23   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/famfamfam-flags/dist/sprite/famfamfam-flags.css  
+INFO  2018-03-10 17:36:11,163 [23   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/famfamfam-flags/dist/sprite/famfamfam-flags.css'. Physical path: 'C:\git\Hack2018\src\src\Esendexers.HomelessWays.Web\wwwroot\lib\famfamfam-flags\dist\sprite\famfamfam-flags.css'
+INFO  2018-03-10 17:36:11,163 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/css/main.css  
+INFO  2018-03-10 17:36:11,165 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/font-awesome/css/font-awesome.css  
+INFO  2018-03-10 17:36:11,166 [12   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/font-awesome/css/font-awesome.css'. Physical path: 'C:\git\Hack2018\src\src\Esendexers.HomelessWays.Web\wwwroot\lib\font-awesome\css\font-awesome.css'
+INFO  2018-03-10 17:36:11,166 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/css/main.css'. Physical path: 'C:\git\Hack2018\src\src\Esendexers.HomelessWays.Web\wwwroot\css\main.css'
+INFO  2018-03-10 17:36:11,174 [23   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 15.0454ms 200 text/css
+INFO  2018-03-10 17:36:11,174 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 21.1981ms 200 text/css
+INFO  2018-03-10 17:36:11,174 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 18.9179ms 200 text/css
+INFO  2018-03-10 17:36:11,174 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9.131ms 200 text/css
+INFO  2018-03-10 17:36:11,175 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 15.5083ms 200 text/css
+INFO  2018-03-10 17:36:11,175 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 12.1007ms 200 text/css
+INFO  2018-03-10 17:36:11,176 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/json2/json2.js  
+INFO  2018-03-10 17:36:11,176 [23   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/jquery/dist/jquery.js  
+INFO  2018-03-10 17:36:11,178 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/bootstrap/dist/js/bootstrap.js  
+INFO  2018-03-10 17:36:11,178 [20   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/json2/json2.js'. Physical path: 'C:\git\Hack2018\src\src\Esendexers.HomelessWays.Web\wwwroot\lib\json2\json2.js'
+INFO  2018-03-10 17:36:11,179 [23   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/jquery/dist/jquery.js'. Physical path: 'C:\git\Hack2018\src\src\Esendexers.HomelessWays.Web\wwwroot\lib\jquery\dist\jquery.js'
+INFO  2018-03-10 17:36:11,179 [22   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.js'. Physical path: 'C:\git\Hack2018\src\src\Esendexers.HomelessWays.Web\wwwroot\lib\bootstrap\dist\js\bootstrap.js'
+INFO  2018-03-10 17:36:11,179 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3.092ms 200 application/javascript
+INFO  2018-03-10 17:36:11,181 [23   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4.0144ms 200 application/javascript
+INFO  2018-03-10 17:36:11,184 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7.7136ms 200 application/javascript
+INFO  2018-03-10 17:36:11,184 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/moment/min/moment-with-locales.js  
+INFO  2018-03-10 17:36:11,185 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/jquery-validation/dist/jquery.validate.js  
+INFO  2018-03-10 17:36:11,185 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/moment/min/moment-with-locales.js'. Physical path: 'C:\git\Hack2018\src\src\Esendexers.HomelessWays.Web\wwwroot\lib\moment\min\moment-with-locales.js'
+INFO  2018-03-10 17:36:11,186 [17   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.js'. Physical path: 'C:\git\Hack2018\src\src\Esendexers.HomelessWays.Web\wwwroot\lib\jquery-validation\dist\jquery.validate.js'
+INFO  2018-03-10 17:36:11,186 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.3143ms 200 application/javascript
+INFO  2018-03-10 17:36:11,188 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/blockUI/jquery.blockUI.js  
+INFO  2018-03-10 17:36:11,189 [20   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/blockUI/jquery.blockUI.js'. Physical path: 'C:\git\Hack2018\src\src\Esendexers.HomelessWays.Web\wwwroot\lib\blockUI\jquery.blockUI.js'
+INFO  2018-03-10 17:36:11,197 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.1684ms 200 application/javascript
+INFO  2018-03-10 17:36:11,199 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/toastr/toastr.js  
+INFO  2018-03-10 17:36:11,200 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 15.8047ms 200 application/javascript
+INFO  2018-03-10 17:36:11,201 [21   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/toastr/toastr.js'. Physical path: 'C:\git\Hack2018\src\src\Esendexers.HomelessWays.Web\wwwroot\lib\toastr\toastr.js'
+INFO  2018-03-10 17:36:11,202 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.06ms 200 application/javascript
+INFO  2018-03-10 17:36:11,203 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/sweetalert/dist/sweetalert-dev.js  
+INFO  2018-03-10 17:36:11,205 [21   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/sweetalert/dist/sweetalert-dev.js'. Physical path: 'C:\git\Hack2018\src\src\Esendexers.HomelessWays.Web\wwwroot\lib\sweetalert\dist\sweetalert-dev.js'
+INFO  2018-03-10 17:36:11,205 [23   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/spin.js/jquery.spin.js  
+INFO  2018-03-10 17:36:11,205 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/spin.js/spin.js  
+INFO  2018-03-10 17:36:11,206 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/spin.js/spin.js'. Physical path: 'C:\git\Hack2018\src\src\Esendexers.HomelessWays.Web\wwwroot\lib\spin.js\spin.js'
+INFO  2018-03-10 17:36:11,206 [23   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/spin.js/jquery.spin.js'. Physical path: 'C:\git\Hack2018\src\src\Esendexers.HomelessWays.Web\wwwroot\lib\spin.js\jquery.spin.js'
+INFO  2018-03-10 17:36:11,206 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.3423ms 200 application/javascript
+INFO  2018-03-10 17:36:11,206 [23   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.3237ms 200 application/javascript
+INFO  2018-03-10 17:36:11,208 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4.3739ms 200 application/javascript
+INFO  2018-03-10 17:36:11,211 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/abp-web-resources/Abp/Framework/scripts/abp.js  
+INFO  2018-03-10 17:36:11,212 [18   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/abp-web-resources/Abp/Framework/scripts/abp.js'. Physical path: 'C:\git\Hack2018\src\src\Esendexers.HomelessWays.Web\wwwroot\lib\abp-web-resources\Abp\Framework\scripts\abp.js'
+INFO  2018-03-10 17:36:11,213 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.3653ms 200 application/javascript
+INFO  2018-03-10 17:36:11,213 [23   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.jquery.js  
+INFO  2018-03-10 17:36:11,214 [23   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.jquery.js'. Physical path: 'C:\git\Hack2018\src\src\Esendexers.HomelessWays.Web\wwwroot\lib\abp-web-resources\Abp\Framework\scripts\libs\abp.jquery.js'
+INFO  2018-03-10 17:36:11,215 [23   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.892ms 200 application/javascript
+INFO  2018-03-10 17:36:11,219 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.blockUI.js  
+INFO  2018-03-10 17:36:11,219 [18   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.blockUI.js'. Physical path: 'C:\git\Hack2018\src\src\Esendexers.HomelessWays.Web\wwwroot\lib\abp-web-resources\Abp\Framework\scripts\libs\abp.blockUI.js'
+INFO  2018-03-10 17:36:11,220 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.toastr.js  
+INFO  2018-03-10 17:36:11,220 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.238ms 200 application/javascript
+INFO  2018-03-10 17:36:11,220 [17   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.toastr.js'. Physical path: 'C:\git\Hack2018\src\src\Esendexers.HomelessWays.Web\wwwroot\lib\abp-web-resources\Abp\Framework\scripts\libs\abp.toastr.js'
+INFO  2018-03-10 17:36:11,221 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.9012ms 200 application/javascript
+INFO  2018-03-10 17:36:11,221 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.sweet-alert.js  
+INFO  2018-03-10 17:36:11,222 [18   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.sweet-alert.js'. Physical path: 'C:\git\Hack2018\src\src\Esendexers.HomelessWays.Web\wwwroot\lib\abp-web-resources\Abp\Framework\scripts\libs\abp.sweet-alert.js'
+INFO  2018-03-10 17:36:11,223 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.spin.js  
+INFO  2018-03-10 17:36:11,223 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.8629ms 200 application/javascript
+INFO  2018-03-10 17:36:11,223 [20   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.spin.js'. Physical path: 'C:\git\Hack2018\src\src\Esendexers.HomelessWays.Web\wwwroot\lib\abp-web-resources\Abp\Framework\scripts\libs\abp.spin.js'
+INFO  2018-03-10 17:36:11,224 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpServiceProxies/GetAll?v=636563001711280391  
+INFO  2018-03-10 17:36:11,224 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.3366ms 200 application/javascript
+INFO  2018-03-10 17:36:11,229 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - ModelState is Valid
+INFO  2018-03-10 17:36:11,230 [17   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2018-03-10 17:36:11,230 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 4.4577ms
+INFO  2018-03-10 17:36:11,230 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6.2659ms 200 application/x-javascript
+INFO  2018-03-10 17:36:11,232 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpScripts/GetScripts?v=636563001711285888  
+INFO  2018-03-10 17:36:11,233 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/js/views/home/index.js  
+INFO  2018-03-10 17:36:11,233 [20   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/js/views/home/index.js'. Physical path: 'C:\git\Hack2018\src\src\Esendexers.HomelessWays.Web\wwwroot\js\views\home\index.js'
+INFO  2018-03-10 17:36:11,234 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.7138ms 200 application/javascript
+INFO  2018-03-10 17:36:11,236 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - ModelState is Valid
+INFO  2018-03-10 17:36:11,241 [17   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2018-03-10 17:36:11,241 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 7.2533ms
+INFO  2018-03-10 17:36:11,241 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10.0383ms 200 application/x-javascript; charset=utf-8
+INFO  2018-03-10 17:36:13,414 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3  
+INFO  2018-03-10 17:36:13,415 [20   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/font-awesome/fonts/fontawesome-webfont.woff2'. Physical path: 'C:\git\Hack2018\src\src\Esendexers.HomelessWays.Web\wwwroot\lib\font-awesome\fonts\fontawesome-webfont.woff2'
+INFO  2018-03-10 17:36:13,416 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.6179ms 200 font/woff2
+INFO  2018-03-10 17:36:13,416 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/famfamfam-flags/dist/sprite/famfamfam-flags.png  
+INFO  2018-03-10 17:36:13,417 [12   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/famfamfam-flags/dist/sprite/famfamfam-flags.png'. Physical path: 'C:\git\Hack2018\src\src\Esendexers.HomelessWays.Web\wwwroot\lib\famfamfam-flags\dist\sprite\famfamfam-flags.png'
+INFO  2018-03-10 17:36:13,418 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.1571ms 200 image/png
+INFO  2018-03-10 17:36:14,740 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/favicon.ico  
+INFO  2018-03-10 17:36:14,741 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.2743ms 404 
