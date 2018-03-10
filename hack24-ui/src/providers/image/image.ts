@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 
@@ -11,7 +10,7 @@ export class ImageProvider {
     mediaType: this.camera.MediaType.PICTURE
   }
 
-  constructor(public http: HttpClient, private camera: Camera) {}
+  constructor(private camera: Camera) {}
 
   takePicture(): Promise<string> {
     return this.camera.getPicture(this.options).then((imageData) => {
