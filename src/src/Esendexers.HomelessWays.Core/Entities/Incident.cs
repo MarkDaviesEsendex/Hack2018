@@ -11,7 +11,6 @@ namespace Esendexers.HomelessWays.Entities
         public virtual DateTime Time { get; set; }
         public virtual string Description { get; set; }
         public virtual double PositivitySentimentScore { get; set; }
-        [ForeignKey("ImageId")]
         public virtual Guid ImageId { get; set; }
     }
 }

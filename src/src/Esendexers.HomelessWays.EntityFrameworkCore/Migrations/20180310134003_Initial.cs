@@ -37,6 +37,20 @@ namespace Esendexers.HomelessWays.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Incidents", x => x.Id);
+                    table.ForeignKey("FK_Incidents_ImageId", x => x.ImageId, "Images", "Id");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Tags",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Name = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Tags", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -51,19 +65,8 @@ namespace Esendexers.HomelessWays.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_IncidentTags", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Tags",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Name = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Tags", x => x.Id);
+                    table.ForeignKey("FK_IncidentTags_IncidentId", x => x.IncidentId, "Incidents", "Id");
+                    table.ForeignKey("FK_IncidentTags_TagId", x => x.TagId, "Tags", "Id");
                 });
 
             migrationBuilder.CreateTable(

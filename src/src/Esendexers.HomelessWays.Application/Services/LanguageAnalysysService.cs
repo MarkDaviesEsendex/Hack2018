@@ -5,6 +5,11 @@ using Microsoft.Azure.CognitiveServices.Language.TextAnalytics.Models;
 
 namespace Esendexers.HomelessWays.Services
 {
+    public interface ILanguageAnalysysService
+    {
+        double GetSentimentScore(string description);
+    }
+
     public class LanguageAnalysysService :  HomelessWaysAppServiceBase, ILanguageAnalysysService
     {
         public double GetSentimentScore(string description)
@@ -24,8 +29,4 @@ namespace Esendexers.HomelessWays.Services
         }
     }
 
-    public interface ILanguageAnalysysService
-    {
-        double GetSentimentScore(string description);
-    }
 }
