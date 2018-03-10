@@ -9,7 +9,6 @@ namespace Esendexers.HomelessWays.Web.Controllers
     public class IncidentsController : HomelessWaysControllerBase
     {
         private readonly IIncidentService _incidentService;
-
         private readonly IObjectMapper _objectMapper;
 
         public IncidentsController(IIncidentService incidentService, IObjectMapper objectMapper)
@@ -19,7 +18,7 @@ namespace Esendexers.HomelessWays.Web.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> IncidentsNearby(Coordinates currentLocation, uint radius)
+        public async Task<IActionResult> NearbyIncidents(Coordinates currentLocation, uint radius)
         {
             var incidents = await _incidentService.GetIncidentsAroundLocation(_objectMapper.Map<HomelessWays.Models.Coordinates>(currentLocation), radius);
 
