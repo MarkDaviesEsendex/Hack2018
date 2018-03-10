@@ -12,36 +12,26 @@ namespace Esendexers.HomelessWays.Web.Controllers
     public class TestController : HomelessWaysControllerBase
     {
         private readonly ILanguageAnalysysService _languageAnalysys;
+        private IImageStorageService _imageStorageService;
         private IImageAnalysisService _imageAnalysis;
         private readonly IIncidentAppService _incidentAppService;
 
-        public TestController(ILanguageAnalysysService languageAnalysys, IIncidentAppService incidentAppService, IImageAnalysisService imageAnalysis)
+        public TestController(ILanguageAnalysysService languageAnalysys, IIncidentAppService incidentAppService, IImageAnalysisService imageAnalysis, IImageStorageService imageStorageService)
         {
             _languageAnalysys = languageAnalysys;
             _incidentAppService = incidentAppService;
             _imageAnalysis = imageAnalysis;
+            _imageStorageService = imageStorageService;
         }
 
         public IActionResult Test(string description) 
             => Ok(_languageAnalysys.GetSentimentScore(description));
 
-        public async Task<IActionResult> Image(string imageLocation)
+        public IActionResult Image(string imageLocation)
         {
-            var imageName = Guid.NewGuid().ToString();
-            var filStream = System.IO.File.Open(imageLocation, FileMode.Open);
+            var imageUrl = _imageStorageService.GetImageLink(imageLocation);
 
-            var storageAccount = CloudStorageAccount.Parse(
-                "DefaultEndpointsProtocol=https;AccountName=citysaves;AccountKey=Uk3eaRSJ9LW7+YCJ9d2qWwKjePIPAQsmhLvIOkN0BqTTC4pHrU6tebPDBhFGb0KFnyIMS9pHm3z+IjRkk7RAkw==");
-
-            var fileClient = storageAccount.CreateCloudFileClient();
-            var share = fileClient.GetShareReference("citysaves");
-            var rootDirectory = share.GetRootDirectoryReference();
-            var imageDirectory = rootDirectory.GetDirectoryReference("Images");
-            var file = imageDirectory.GetFileReference(imageName);
-
-            await file.UploadFromStreamAsync(filStream, AccessCondition.GenerateEmptyCondition(),
-                new FileRequestOptions(), new OperationContext());
-            return Ok(true);
+            return Ok(imageUrl);
         }
 
         static byte[] GetImageAsByteArray(string imageFilePath)
