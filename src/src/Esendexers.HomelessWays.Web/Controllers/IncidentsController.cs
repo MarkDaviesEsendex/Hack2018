@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Esendexers.HomelessWays.Web.Models.Incidents;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis;
 
 namespace Esendexers.HomelessWays.Web.Controllers
@@ -8,14 +9,7 @@ namespace Esendexers.HomelessWays.Web.Controllers
         [HttpGet]
         public IActionResult IncidentsNearby(Coordinates currentLocation, uint radius)
         {
-//            currentLocation.
-            return Json("hi");
+            return Ok(true);
         }
-    }
-
-    public class Coordinates
-    {
-        public string Latitude { get; set; }
-        public string Longitude { get; set; }
     }
 }
