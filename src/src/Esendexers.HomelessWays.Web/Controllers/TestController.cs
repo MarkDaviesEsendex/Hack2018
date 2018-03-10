@@ -23,7 +23,7 @@ namespace Esendexers.HomelessWays.Web.Controllers
         {
             _incidentAppService.RecordNewIncident(new CreateIncidentInput
             {
-                Description = "REally bad graffiti",
+                Description = "Really bad stuff is going down",
                 Latitude = "Hello",
                 Longitude = "Hello",
                 Time = DateTime.Now

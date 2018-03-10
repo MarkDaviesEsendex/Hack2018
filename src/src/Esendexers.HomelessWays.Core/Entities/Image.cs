@@ -1,9 +1,8 @@
-﻿using System;
-using Abp.Domain.Entities;
+﻿using Abp.Domain.Entities;
 
 namespace Esendexers.HomelessWays.Entities
 {
-    public class Image : Entity<Guid>
+    public class Image : Entity
     {
         public virtual string ImagePath { get; set; }
     }
