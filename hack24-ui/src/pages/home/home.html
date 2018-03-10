@@ -9,9 +9,18 @@
 
 <ion-content padding>
   <h3>Welcome to HomelessWays!</h3>
-
-  <button ion-button>
-    <ion-icon name="paper-plane" (click)="openReportIncidentModal()"></ion-icon>
-    Report An Incident
-  </button>
+  <div class="image-container">
+    <img [src]="imageBase64" class="rotate90" *ngIf="imageBase64">
+  </div>
+  <div class="row">
+      <textarea [(ngModel)]="description"></textarea>
+  </div>
+  <div class="row">
+    <div class="col">
+        <button ion-button secondary (click)="takePicture()">Take a picture</button>
+    </div>
+    <div class="col">
+        <button ion-button secondary *ngIf="displaySubmit()" (click)="submit()">Submit</button>
+    </div>
+  </div>
 </ion-content>

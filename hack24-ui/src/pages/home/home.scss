@@ -1,4 +1,13 @@
+.image-container {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
 .rotate90 {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   -o-transform: rotate(90deg);
