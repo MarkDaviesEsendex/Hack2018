@@ -1,9 +1,13 @@
 ﻿using System;
+using System.IO;
+using System.Threading.Tasks;
 using Castle.Core.Logging;
 using Esendexers.HomelessWays.Inputs;
 using Esendexers.HomelessWays.Services;
 using Esendexers.HomelessWays.Web.Models.Submit;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.File;
 using Newtonsoft.Json;
 using SixLabors.ImageSharp;
 
@@ -21,10 +25,22 @@ namespace Esendexers.HomelessWays.Web.Controllers
         }
 
         [HttpPost]
-        public IActionResult RecordIncident([FromBody]IncidentModel incident)
+        public async Task<IActionResult> RecordIncident([FromBody]IncidentModel incident)
         {
-            var imageName = Guid.NewGuid().ToString();
-//            var imageBytes = Convert.FromBase64String(incident.Image);
+            var imageName = $"{Guid.NewGuid().ToString()}.jpg";
+            var imageBytes = Convert.FromBase64String(incident.Image);
+
+            var storageAccount = CloudStorageAccount.Parse(
+                "DefaultEndpointsProtocol=https;AccountName=citysaves;AccountKey=Uk3eaRSJ9LW7+YCJ9d2qWwKjePIPAQsmhLvIOkN0BqTTC4pHrU6tebPDBhFGb0KFnyIMS9pHm3z+IjRkk7RAkw==");
+
+            var fileClient = storageAccount.CreateCloudFileClient();
+            var share = fileClient.GetShareReference("citysaves");
+            var rootDirectory = share.GetRootDirectoryReference();
+            var imageDirectory = rootDirectory.GetDirectoryReference("Images");
+            var file = imageDirectory.GetFileReference(imageName);
+
+            await file.UploadFromStreamAsync(new MemoryStream(imageBytes), AccessCondition.GenerateEmptyCondition(),
+                new FileRequestOptions(), new OperationContext());
 
             _logger.Info(JsonConvert.SerializeObject(incident));
 
