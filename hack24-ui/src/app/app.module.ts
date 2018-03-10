@@ -11,6 +11,8 @@ import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ImageProvider } from '../providers/image/image';
+import { GeolocationProvider } from '../providers/geolocation/geolocation';
+import { IncidentHttpProvider } from '../providers/incident-http/incident-http';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { ImageProvider } from '../providers/image/image';
     Geolocation,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    ImageProvider
+    ImageProvider,
+    GeolocationProvider,
+    IncidentHttpProvider
 
   ]
 })
