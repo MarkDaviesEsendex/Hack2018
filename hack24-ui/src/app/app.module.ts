@@ -24,6 +24,7 @@ import { SpinnerProvider } from '../providers/spinner/spinner';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -41,7 +42,6 @@ import { SpinnerProvider } from '../providers/spinner/spinner';
     GeolocationProvider,
     IncidentHttpProvider,
     SpinnerProvider
-
   ]
 })
 export class AppModule { }

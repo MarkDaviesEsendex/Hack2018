@@ -1,4 +1,3 @@
 export class Node {
-  public longitude: number;
-  public latitude: number;
+  constructor(public latitude: number, public longitude: number) {}
 }
