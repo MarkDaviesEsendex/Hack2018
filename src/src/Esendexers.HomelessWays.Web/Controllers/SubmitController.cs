@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.Threading.Tasks;
-using Castle.Core.Logging;
 using Esendexers.HomelessWays.Inputs;
 using Esendexers.HomelessWays.Services;
 using Esendexers.HomelessWays.Web.Models.Submit;
@@ -17,12 +16,10 @@ namespace Esendexers.HomelessWays.Web.Controllers
     {
         private readonly IImageStorageService _imageStorageService;
         private readonly IIncidentAppService _incidentAppService;
-        private readonly ILogger _logger;
 
-        public SubmitController(IIncidentAppService incidentAppService, ILogger logger, IImageStorageService imageStorageService)
+        public SubmitController(IIncidentAppService incidentAppService, IImageStorageService imageStorageService)
         {
             _incidentAppService = incidentAppService;
-            _logger = logger;
             _imageStorageService = imageStorageService;
         }
 
@@ -40,7 +37,8 @@ namespace Esendexers.HomelessWays.Web.Controllers
                 Longitude = incident.Position.Longitude,
                 Latitude = incident.Position.Latitude,
                 Time = DateTime.Now,
-                ImageName = imageName
+                ImageName = imageName,
+                ImageBytes =  imageBytes
             };
             return Ok(_incidentAppService.RecordNewIncident(newIncidentInput));
         }
