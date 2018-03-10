@@ -20,13 +20,13 @@ namespace Esendexers.HomelessWays.Web.Controllers
         public IActionResult RecordIncident(IncidentModel incident)
         {
             var imageName = Guid.NewGuid().ToString();
-            var imageBytes = Convert.FromBase64String(incident.IncidentImage);
+            var imageBytes = Convert.FromBase64String(incident.Image);
 
             var newIncidentInput = new CreateIncidentInput
             {
                 Description = incident.Description,
-                Longitude = incident.Longitude,
-                Latitude = incident.Latitude,
+                Longitude = incident.Position.Longitude,
+                Latitude = incident.Position.Latitude,
                 Time = DateTime.Now,
                 ImageName = imageName
             };
