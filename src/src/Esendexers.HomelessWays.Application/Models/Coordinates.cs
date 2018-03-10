@@ -1,8 +1,7 @@
 ﻿using Abp.AutoMapper;
 
-namespace Esendexers.HomelessWays.Web.Models.Incidents
+namespace Esendexers.HomelessWays.Models
 {
-    [AutoMapTo(typeof(HomelessWays.Models.Coordinates))]
     public class Coordinates
     {
         public string Latitude { get; set; }
