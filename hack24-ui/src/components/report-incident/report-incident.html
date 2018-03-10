@@ -1,0 +1,7 @@
+<!-- Generated template for the ReportIncidentComponent component -->
+<div>
+  <img *ngIf="imageBase64" [src]="imageBase64" class="rotate90">
+  <textarea [(ngModel)]="description"></textarea>
+  <button ion-button secondary (click)="takePicture()">Take a picture</button>
+  <button ion-button secondary *ngIf="displaySubmit()" (click)="submit()">Submit</button>
+</div>

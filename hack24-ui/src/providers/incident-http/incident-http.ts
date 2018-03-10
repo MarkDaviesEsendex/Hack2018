@@ -1,5 +1,11 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { HttpClient } from "@angular/common/http";
+import { Injectable } from "@angular/core";
+import * as constants from "../../constants";
+import { Node } from "../../model/node.model";
+import { IncidentModel } from "../../model/incident.model";
+import { Status } from "../../model/status.enum";
+import { Observable } from "rxjs/Observable";
+import { map } from 'rxjs/operators';
 
 /*
   Generated class for the IncidentHttpProvider provider.
@@ -9,9 +15,13 @@ import { Injectable } from '@angular/core';
 */
 @Injectable()
 export class IncidentHttpProvider {
+  constructor(private http: HttpClient) {}
 
-  constructor(public http: HttpClient) {
-    console.log('Hello IncidentHttpProvider Provider');
+  RecordIncident(incidentModel: IncidentModel): Observable<Status> {
+    return this.http
+      .post(`${constants.ApiBaseUrl}/submit/recordincident`, incidentModel)
+      .pipe(
+        map(success => Status.Success, error =>  Status.Error)
+      );
   }
-
 }

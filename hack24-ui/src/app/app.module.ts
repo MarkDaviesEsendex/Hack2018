@@ -23,6 +23,7 @@ import { IncidentHttpProvider } from '../providers/incident-http/incident-http';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -39,7 +40,6 @@ import { IncidentHttpProvider } from '../providers/incident-http/incident-http';
     ImageProvider,
     GeolocationProvider,
     IncidentHttpProvider
-
   ]
 })
 export class AppModule { }

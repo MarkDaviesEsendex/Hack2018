@@ -1,30 +1,26 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ModalController } from 'ionic-angular';
 import { ImageProvider } from '../../providers/image/image';
 import { GeolocationProvider } from '../../providers/geolocation/geolocation';
+import { ReportIncidentComponent } from '../../components/report-incident/report-incident';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
-  latitude: number;
-  longitude: number;
-  imageBase64: string;
-  description: string;
 
-  constructor(public navCtrl: NavController, private imageProvider: ImageProvider, private geolocator: GeolocationProvider) { }
 
-  async takePicture() {
-    const location = await this.geolocator.getLocation();
-    this.latitude = location.coords.latitude;
-    this.longitude = location.coords.longitude;
-    this.imageBase64 = await this.imageProvider.takePicture();
-    console.log(`[CORDOVA] ${this.latitude}, ${this.longitude}`);
-    console.log(`[CORDOVA] ${this.imageBase64}`);
-    }
+  constructor(public navCtrl: NavController,
 
-  displaySubmit() {
-    return this.imageBase64 || (this.description && this.description.length > 0);
+              private modalCtrl: ModalController) { }
+
+  openReportIncidentModal() {
+    let reportModal = this.modalCtrl.create(ReportIncidentComponent);
+    reportModal.present();
+
+    reportModal.onDidDismiss(() => {
+
+    });
   }
 }
