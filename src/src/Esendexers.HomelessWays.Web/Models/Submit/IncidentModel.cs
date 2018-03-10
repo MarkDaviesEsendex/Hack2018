@@ -4,9 +4,8 @@ namespace Esendexers.HomelessWays.Web.Models.Submit
 {
     public class IncidentModel
     {
-        public IFormFile IncidentImage { get; set; }
-        public string Latitude { get;set; }
-        public string Longitude { get; set; }
+        public string Image { get; set; }
+        public Node Position { get; set; }
         public string Description { get; set; }
     }
 }

@@ -13,7 +13,8 @@ namespace Esendexers.HomelessWays.Migrations
                 name: "Images",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(nullable: false),
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     ImagePath = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -28,17 +29,18 @@ namespace Esendexers.HomelessWays.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Description = table.Column<string>(nullable: true),
-                    ImageId = table.Column<Guid>(nullable: false),
+                    ImageId = table.Column<int>(nullable: false),
                     Latitude = table.Column<string>(nullable: true),
                     Longitude = table.Column<string>(nullable: true),
-                    PositivitySentimentScore = table.Column<float>(nullable: false),
+                    PositivitySentimentScore = table.Column<double>(nullable: false),
                     Time = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Incidents", x => x.Id);
-                    table.ForeignKey("FK_Incidents_ImageId", x => x.ImageId, "Images", "Id");
+                    table.ForeignKey("FK_Images", x => x.ImageId, "Images", "Id");
                 });
+
 
             migrationBuilder.CreateTable(
                 name: "Tags",
@@ -65,8 +67,8 @@ namespace Esendexers.HomelessWays.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_IncidentTags", x => x.Id);
-                    table.ForeignKey("FK_IncidentTags_IncidentId", x => x.IncidentId, "Incidents", "Id");
-                    table.ForeignKey("FK_IncidentTags_TagId", x => x.TagId, "Tags", "Id");
+                    table.ForeignKey("FK_Inciddents", x => x.IncidentId, "Incidents", "Id");
+                    table.ForeignKey("FK_Tags", x => x.TagId, "Tags", "Id");
                 });
 
             migrationBuilder.CreateTable(

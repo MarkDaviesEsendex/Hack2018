@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 
@@ -11,15 +10,16 @@ export class ImageProvider {
     mediaType: this.camera.MediaType.PICTURE
   }
 
-  constructor(public http: HttpClient, private camera: Camera) {}
+  constructor(private camera: Camera) {}
 
-  takePicture(): void {
-    this.camera.getPicture(this.options).then((imageData) => {
+  takePicture(): Promise<string> {
+    return this.camera.getPicture(this.options).then((imageData) => {
       // imageData is either a base64 encoded string or a file URI
       // If it's base64:
-      let base64Image = 'data:image/jpeg;base64,' + imageData;
+      const base64Image = 'data:image/jpeg;base64,' + imageData;
+      return base64Image;
     }, (err) => {
-      // Handle error
+      return err;
     });
   }
 }

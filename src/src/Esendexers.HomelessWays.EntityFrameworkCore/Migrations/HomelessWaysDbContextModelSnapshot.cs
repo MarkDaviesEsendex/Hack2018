@@ -22,7 +22,7 @@ namespace Esendexers.HomelessWays.Migrations
 
             modelBuilder.Entity("Esendexers.HomelessWays.Entities.Image", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("ImagePath");
@@ -39,7 +39,7 @@ namespace Esendexers.HomelessWays.Migrations
 
                     b.Property<string>("Description");
 
-                    b.Property<Guid>("ImageId");
+                    b.Property<int>("ImageId");
 
                     b.Property<string>("Latitude");
 
