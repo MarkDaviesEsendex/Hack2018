@@ -13,7 +13,7 @@
   <p>
     Welcome to HomelessGays!
   </p>
-  <img [src]="imageBase64">
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <img *ngIf="imageBase64" [src]="imageBase64" class="rotate90">
+  <textarea [(ngModel)]="description"></textarea>
   <button ion-button secondary (click)="takePicture()">Take a picture</button>
 </ion-content>

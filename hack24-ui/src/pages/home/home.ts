@@ -2,16 +2,17 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ImageProvider } from '../../providers/image/image';
 import { GeolocationProvider } from '../../providers/geolocation/geolocation';
-import { Geoposition } from '@ionic-native/geolocation';
 
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'home.html',
+  styleUrls : ['home.scss']
 })
 export class HomePage {
   latitude: number;
   longitude: number;
   imageBase64: string;
+  description : string;
 
   constructor(public navCtrl: NavController, private imageProvider: ImageProvider, private geolocator: GeolocationProvider) { }
 
