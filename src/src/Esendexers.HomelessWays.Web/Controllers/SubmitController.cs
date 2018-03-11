@@ -29,14 +29,7 @@ namespace Esendexers.HomelessWays.Web.Controllers
             var imageName = $"{Guid.NewGuid().ToString()}.jpg";
             var imageBytes = Convert.FromBase64String(incident.Image);
 
-            if (incident.Description.IndexOf("Space", StringComparison.CurrentCultureIgnoreCase) != -1 &&
-                incident.Description.IndexOf("Invaders", StringComparison.CurrentCultureIgnoreCase) != -1)
-            {
-                return RedirectToAction("Index", "Invaders");
-            }
-
             await _imageStorageService.UploadImageBytes(imageName, imageBytes);
-
             var newIncidentInput = new CreateIncidentInput
             {
                 Description = incident.Description,

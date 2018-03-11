@@ -54,12 +54,12 @@ namespace Esendexers.HomelessWays.Services
                     ? _tagRepository.InsertAndGetId(new Tag {Name = phrase})
                     : databasePhrase.Id).ToList();
 
-            var imageTags = _imageAnalysisService.AnalyzeImage(incidentRequest.ImageBytes).Result.Description.Tags;
-            incidentTags.AddRange((from imageTag in imageTags
-                let databasePhrase = _tagRepository.GetAll().FirstOrDefault(tag => tag.Name == imageTag)
-                select databasePhrase == null
-                    ? _tagRepository.InsertAndGetId(new Tag {Name = imageTag})
-                    : databasePhrase.Id).ToList());
+//            var imageTags = _imageAnalysisService.AnalyzeImage(incidentRequest.ImageBytes).Result.Description.Tags;
+//            incidentTags.AddRange((from imageTag in imageTags
+//                let databasePhrase = _tagRepository.GetAll().FirstOrDefault(tag => tag.Name == imageTag)
+//                select databasePhrase == null
+//                    ? _tagRepository.InsertAndGetId(new Tag {Name = imageTag})
+//                    : databasePhrase.Id).ToList());
 
             incident.ImageId = _imageRepository.InsertAndGetId(new Image { ImagePath = incidentRequest.ImageName });
             var incidentId = _incidentRepository.InsertAndGetId(incident);

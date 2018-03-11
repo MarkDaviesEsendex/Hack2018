@@ -5107,3 +5107,390 @@ INFO  2018-03-11 00:35:55,337 [18   ] ore.Mvc.Internal.ControllerActionInvoker -
 INFO  2018-03-11 00:35:55,341 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 333.1845ms 200 application/x-javascript
 INFO  2018-03-11 00:35:55,377 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/favicon.ico  
 INFO  2018-03-11 00:35:55,383 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7.447ms 404 
+DEBUG 2018-03-11 00:55:05,607 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-03-11 00:55:05,706 [1    ] Abp.Modules.AbpModuleManager             - Found 10 ABP modules in total.
+DEBUG 2018-03-11 00:55:05,735 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.Web.Startup.HomelessWaysWebModule, Esendexers.HomelessWays.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:55:05,738 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.HomelessWaysApplicationModule, Esendexers.HomelessWays.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:55:05,738 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.HomelessWaysCoreModule, Esendexers.HomelessWays.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:55:05,739 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:55:05,739 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:55:05,739 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.EntityFrameworkCore.HomelessWaysEntityFrameworkCoreModule, Esendexers.HomelessWays.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:55:05,740 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:55:05,740 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:55:05,740 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:55:05,740 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:55:05,744 [1    ] Abp.Modules.AbpModuleManager             - 10 modules loaded.
+DEBUG 2018-03-11 00:55:05,976 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: Esendexers.HomelessWays.EntityFrameworkCore.HomelessWaysDbContext, Esendexers.HomelessWays.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:55:06,112 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-03-11 00:55:06,132 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-03-11 00:55:06,357 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: HomelessWays
+DEBUG 2018-03-11 00:55:06,360 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-03-11 00:55:06,811 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-03-11 00:55:06,886 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 3 classes define auto mapping attributes
+DEBUG 2018-03-11 00:55:06,886 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.Inputs.CreateIncidentInput
+DEBUG 2018-03-11 00:55:06,892 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.DTOs.IncidentDto
+DEBUG 2018-03-11 00:55:06,893 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.Web.Models.Incidents.Coordinates
+INFO  2018-03-11 00:55:07,799 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/  
+WARN  2018-03-11 00:55:07,915 [11   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-03-11 00:55:07,935 [11   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-03-11 00:55:08,307 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Esendexers.HomelessWays.Web.Controllers.HomeController.Index (Esendexers.HomelessWays.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-03-11 00:55:08,327 [11   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Web.Controllers.HomeController.Index is executed by an anonymous user in 50 ms from ::1 IP address with succeed.
+INFO  2018-03-11 00:55:11,411 [11   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+INFO  2018-03-11 00:55:12,830 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Esendexers.HomelessWays.Web.Controllers.HomeController.Index (Esendexers.HomelessWays.Web) in 4574.4695ms
+INFO  2018-03-11 00:55:12,843 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5075.1183ms 200 text/html; charset=utf-8
+INFO  2018-03-11 00:55:12,883 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpServiceProxies/GetAll?v=636563265127755583  
+INFO  2018-03-11 00:55:12,994 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - ModelState is Valid
+INFO  2018-03-11 00:55:13,090 [17   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2018-03-11 00:55:13,095 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 154.1568ms
+INFO  2018-03-11 00:55:13,099 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 217.6358ms 200 application/x-javascript
+INFO  2018-03-11 00:55:13,925 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/js/views/home/index.js  
+INFO  2018-03-11 00:55:13,929 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpScripts/GetScripts?v=636563265127781894  
+INFO  2018-03-11 00:55:13,941 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/js/views/home/index.js'. Physical path: 'C:\git\Hack2018\src\src\Esendexers.HomelessWays.Web\wwwroot\js\views\home\index.js'
+INFO  2018-03-11 00:55:13,951 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 46.9998ms 200 application/javascript
+INFO  2018-03-11 00:55:13,971 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - ModelState is Valid
+INFO  2018-03-11 00:55:14,070 [12   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2018-03-11 00:55:14,078 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 111.5542ms
+INFO  2018-03-11 00:55:14,086 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 180.7268ms 200 application/x-javascript; charset=utf-8
+INFO  2018-03-11 00:56:30,015 [34   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/Submit/RecordIncident application/json 103837
+INFO  2018-03-11 00:56:31,559 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Esendexers.HomelessWays.Web.Controllers.SubmitController.RecordIncident (Esendexers.HomelessWays.Web) with arguments (Esendexers.HomelessWays.Web.Models.Submit.IncidentModel) - ModelState is Valid
+INFO  2018-03-11 00:56:33,733 [36   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Services.ImageStorageService.UploadImageBytes is executed by an anonymous user in 1939 ms from ::1 IP address with succeed.
+INFO  2018-03-11 00:56:35,313 [36   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Services.LanguageAnalysysService.GetSentimentScore is executed by an anonymous user in 1341 ms from ::1 IP address with succeed.
+INFO  2018-03-11 00:56:36,220 [36   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Services.LanguageAnalysysService.GetKeyPrases is executed by an anonymous user in 906 ms from ::1 IP address with succeed.
+INFO  2018-03-11 00:56:39,549 [12   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Services.ImageAnalysisService.AnalyzeImage is executed by an anonymous user in 1928 ms from ::1 IP address with succeed.
+INFO  2018-03-11 00:56:39,657 [36   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Services.IncidentAppService.RecordNewIncident is executed by an anonymous user in 5709 ms from ::1 IP address with succeed.
+INFO  2018-03-11 00:56:39,747 [11   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Web.Controllers.SubmitController.RecordIncident is executed by an anonymous user in 8203 ms from ::1 IP address with succeed.
+INFO  2018-03-11 00:56:39,757 [11   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-03-11 00:56:39,774 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Esendexers.HomelessWays.Web.Controllers.SubmitController.RecordIncident (Esendexers.HomelessWays.Web) in 9741.5328ms
+INFO  2018-03-11 00:56:39,783 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9767.8725ms 200 application/json; charset=utf-8
+DEBUG 2018-03-11 00:57:10,377 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-03-11 00:57:10,499 [1    ] Abp.Modules.AbpModuleManager             - Found 10 ABP modules in total.
+DEBUG 2018-03-11 00:57:10,529 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.Web.Startup.HomelessWaysWebModule, Esendexers.HomelessWays.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:57:10,532 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.HomelessWaysApplicationModule, Esendexers.HomelessWays.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:57:10,533 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.HomelessWaysCoreModule, Esendexers.HomelessWays.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:57:10,533 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:57:10,534 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:57:10,534 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.EntityFrameworkCore.HomelessWaysEntityFrameworkCoreModule, Esendexers.HomelessWays.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:57:10,534 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:57:10,534 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:57:10,535 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:57:10,535 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:57:10,538 [1    ] Abp.Modules.AbpModuleManager             - 10 modules loaded.
+DEBUG 2018-03-11 00:57:10,778 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: Esendexers.HomelessWays.EntityFrameworkCore.HomelessWaysDbContext, Esendexers.HomelessWays.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:57:10,912 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-03-11 00:57:10,929 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-03-11 00:57:11,140 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: HomelessWays
+DEBUG 2018-03-11 00:57:11,143 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-03-11 00:57:37,314 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-03-11 00:57:37,439 [1    ] Abp.Modules.AbpModuleManager             - Found 10 ABP modules in total.
+DEBUG 2018-03-11 00:57:37,469 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.Web.Startup.HomelessWaysWebModule, Esendexers.HomelessWays.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:57:37,473 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.HomelessWaysApplicationModule, Esendexers.HomelessWays.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:57:37,473 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.HomelessWaysCoreModule, Esendexers.HomelessWays.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:57:37,474 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:57:37,474 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:57:37,474 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.EntityFrameworkCore.HomelessWaysEntityFrameworkCoreModule, Esendexers.HomelessWays.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:57:37,474 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:57:37,475 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:57:37,475 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:57:37,475 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:57:37,479 [1    ] Abp.Modules.AbpModuleManager             - 10 modules loaded.
+DEBUG 2018-03-11 00:57:37,722 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: Esendexers.HomelessWays.EntityFrameworkCore.HomelessWaysDbContext, Esendexers.HomelessWays.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:57:37,837 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-03-11 00:57:37,852 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-03-11 00:57:38,068 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: HomelessWays
+DEBUG 2018-03-11 00:57:38,069 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-03-11 00:57:38,447 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-03-11 00:57:38,507 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 3 classes define auto mapping attributes
+DEBUG 2018-03-11 00:57:38,507 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.Inputs.CreateIncidentInput
+DEBUG 2018-03-11 00:57:38,511 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.DTOs.IncidentDto
+DEBUG 2018-03-11 00:57:38,512 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.Web.Models.Incidents.Coordinates
+DEBUG 2018-03-11 00:58:37,623 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-03-11 00:58:37,714 [1    ] Abp.Modules.AbpModuleManager             - Found 10 ABP modules in total.
+DEBUG 2018-03-11 00:58:37,770 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.Web.Startup.HomelessWaysWebModule, Esendexers.HomelessWays.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:58:37,773 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.HomelessWaysApplicationModule, Esendexers.HomelessWays.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:58:37,774 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.HomelessWaysCoreModule, Esendexers.HomelessWays.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:58:37,775 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:58:37,775 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:58:37,775 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.EntityFrameworkCore.HomelessWaysEntityFrameworkCoreModule, Esendexers.HomelessWays.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:58:37,776 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:58:37,776 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:58:37,776 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:58:37,777 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:58:37,781 [1    ] Abp.Modules.AbpModuleManager             - 10 modules loaded.
+DEBUG 2018-03-11 00:58:38,036 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: Esendexers.HomelessWays.EntityFrameworkCore.HomelessWaysDbContext, Esendexers.HomelessWays.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:58:38,163 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-03-11 00:58:38,180 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-03-11 00:58:38,405 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: HomelessWays
+DEBUG 2018-03-11 00:58:38,406 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-03-11 00:58:38,788 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-03-11 00:58:38,846 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 3 classes define auto mapping attributes
+DEBUG 2018-03-11 00:58:38,846 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.Inputs.CreateIncidentInput
+DEBUG 2018-03-11 00:58:38,850 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.DTOs.IncidentDto
+DEBUG 2018-03-11 00:58:38,850 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.Web.Models.Incidents.Coordinates
+INFO  2018-03-11 00:58:39,855 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/Submit/RecordIncident application/json 103837
+WARN  2018-03-11 00:58:39,951 [12   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-03-11 00:58:39,972 [12   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-03-11 00:58:41,992 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Esendexers.HomelessWays.Web.Controllers.SubmitController.RecordIncident (Esendexers.HomelessWays.Web) with arguments (Esendexers.HomelessWays.Web.Models.Submit.IncidentModel) - ModelState is Valid
+INFO  2018-03-11 00:58:44,336 [12   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Services.ImageStorageService.UploadImageBytes is executed by an anonymous user in 2093 ms from ::1 IP address with succeed.
+INFO  2018-03-11 00:58:45,849 [12   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Services.LanguageAnalysysService.GetSentimentScore is executed by an anonymous user in 1255 ms from ::1 IP address with succeed.
+INFO  2018-03-11 00:58:46,750 [12   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Services.LanguageAnalysysService.GetKeyPrases is executed by an anonymous user in 899 ms from ::1 IP address with succeed.
+DEBUG 2018-03-11 00:59:22,565 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-03-11 00:59:22,691 [1    ] Abp.Modules.AbpModuleManager             - Found 10 ABP modules in total.
+DEBUG 2018-03-11 00:59:22,725 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.Web.Startup.HomelessWaysWebModule, Esendexers.HomelessWays.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:59:22,729 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.HomelessWaysApplicationModule, Esendexers.HomelessWays.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:59:22,730 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.HomelessWaysCoreModule, Esendexers.HomelessWays.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:59:22,731 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:59:22,731 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:59:22,731 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.EntityFrameworkCore.HomelessWaysEntityFrameworkCoreModule, Esendexers.HomelessWays.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:59:22,732 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:59:22,732 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:59:22,732 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:59:22,733 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:59:22,738 [1    ] Abp.Modules.AbpModuleManager             - 10 modules loaded.
+DEBUG 2018-03-11 00:59:22,967 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: Esendexers.HomelessWays.EntityFrameworkCore.HomelessWaysDbContext, Esendexers.HomelessWays.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 00:59:23,090 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-03-11 00:59:23,103 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-03-11 00:59:23,294 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: HomelessWays
+DEBUG 2018-03-11 00:59:23,296 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-03-11 00:59:23,666 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-03-11 00:59:23,722 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 3 classes define auto mapping attributes
+DEBUG 2018-03-11 00:59:23,722 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.Inputs.CreateIncidentInput
+DEBUG 2018-03-11 00:59:23,726 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.DTOs.IncidentDto
+DEBUG 2018-03-11 00:59:23,726 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.Web.Models.Incidents.Coordinates
+INFO  2018-03-11 00:59:24,683 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/  
+WARN  2018-03-11 00:59:24,787 [11   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-03-11 00:59:24,810 [11   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-03-11 00:59:25,142 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Esendexers.HomelessWays.Web.Controllers.HomeController.Index (Esendexers.HomelessWays.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-03-11 00:59:25,162 [11   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Web.Controllers.HomeController.Index is executed by an anonymous user in 53 ms from ::1 IP address with succeed.
+DEBUG 2018-03-11 01:00:35,958 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-03-11 01:00:36,126 [1    ] Abp.Modules.AbpModuleManager             - Found 10 ABP modules in total.
+DEBUG 2018-03-11 01:00:36,205 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.Web.Startup.HomelessWaysWebModule, Esendexers.HomelessWays.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:00:36,209 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.HomelessWaysApplicationModule, Esendexers.HomelessWays.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:00:36,209 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.HomelessWaysCoreModule, Esendexers.HomelessWays.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:00:36,210 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:00:36,210 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:00:36,210 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.EntityFrameworkCore.HomelessWaysEntityFrameworkCoreModule, Esendexers.HomelessWays.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:00:36,211 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:00:36,211 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:00:36,212 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:00:36,212 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:00:36,217 [1    ] Abp.Modules.AbpModuleManager             - 10 modules loaded.
+DEBUG 2018-03-11 01:00:36,517 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: Esendexers.HomelessWays.EntityFrameworkCore.HomelessWaysDbContext, Esendexers.HomelessWays.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:00:36,692 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-03-11 01:00:36,715 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-03-11 01:00:36,899 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: HomelessWays
+DEBUG 2018-03-11 01:00:36,900 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-03-11 01:00:37,284 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-03-11 01:00:37,347 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 3 classes define auto mapping attributes
+DEBUG 2018-03-11 01:00:37,347 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.Inputs.CreateIncidentInput
+DEBUG 2018-03-11 01:00:37,352 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.DTOs.IncidentDto
+DEBUG 2018-03-11 01:00:37,353 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.Web.Models.Incidents.Coordinates
+INFO  2018-03-11 01:00:38,257 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/  
+WARN  2018-03-11 01:00:38,366 [11   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-03-11 01:00:38,389 [11   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-03-11 01:00:38,732 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Esendexers.HomelessWays.Web.Controllers.HomeController.Index (Esendexers.HomelessWays.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-03-11 01:00:38,765 [11   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Web.Controllers.HomeController.Index is executed by an anonymous user in 65 ms from ::1 IP address with succeed.
+INFO  2018-03-11 01:00:41,917 [11   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+DEBUG 2018-03-11 01:01:39,047 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-03-11 01:01:39,165 [1    ] Abp.Modules.AbpModuleManager             - Found 10 ABP modules in total.
+DEBUG 2018-03-11 01:01:39,194 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.Web.Startup.HomelessWaysWebModule, Esendexers.HomelessWays.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:01:39,197 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.HomelessWaysApplicationModule, Esendexers.HomelessWays.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:01:39,198 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.HomelessWaysCoreModule, Esendexers.HomelessWays.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:01:39,198 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:01:39,199 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:01:39,199 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.EntityFrameworkCore.HomelessWaysEntityFrameworkCoreModule, Esendexers.HomelessWays.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:01:39,200 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:01:39,200 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:01:39,200 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:01:39,201 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:01:39,205 [1    ] Abp.Modules.AbpModuleManager             - 10 modules loaded.
+DEBUG 2018-03-11 01:01:39,435 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: Esendexers.HomelessWays.EntityFrameworkCore.HomelessWaysDbContext, Esendexers.HomelessWays.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:01:39,540 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-03-11 01:01:39,551 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-03-11 01:01:39,724 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: HomelessWays
+DEBUG 2018-03-11 01:01:39,726 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-03-11 01:01:40,091 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-03-11 01:01:40,146 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 3 classes define auto mapping attributes
+DEBUG 2018-03-11 01:01:40,146 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.Inputs.CreateIncidentInput
+DEBUG 2018-03-11 01:01:40,150 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.DTOs.IncidentDto
+DEBUG 2018-03-11 01:01:40,151 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.Web.Models.Incidents.Coordinates
+INFO  2018-03-11 01:01:51,189 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://127.0.0.1:23128/iisintegration  0
+INFO  2018-03-11 01:01:51,197 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 24.4665ms 202 
+DEBUG 2018-03-11 01:02:48,932 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-03-11 01:02:49,095 [1    ] Abp.Modules.AbpModuleManager             - Found 10 ABP modules in total.
+DEBUG 2018-03-11 01:02:49,134 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.Web.Startup.HomelessWaysWebModule, Esendexers.HomelessWays.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:02:49,139 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.HomelessWaysApplicationModule, Esendexers.HomelessWays.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:02:49,139 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.HomelessWaysCoreModule, Esendexers.HomelessWays.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:02:49,140 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:02:49,140 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:02:49,140 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.EntityFrameworkCore.HomelessWaysEntityFrameworkCoreModule, Esendexers.HomelessWays.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:02:49,141 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:02:49,141 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:02:49,141 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:02:49,142 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:02:49,146 [1    ] Abp.Modules.AbpModuleManager             - 10 modules loaded.
+DEBUG 2018-03-11 01:02:49,397 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: Esendexers.HomelessWays.EntityFrameworkCore.HomelessWaysDbContext, Esendexers.HomelessWays.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:02:49,574 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-03-11 01:02:49,593 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-03-11 01:02:49,804 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: HomelessWays
+DEBUG 2018-03-11 01:02:49,806 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-03-11 01:02:50,208 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-03-11 01:02:50,271 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 3 classes define auto mapping attributes
+DEBUG 2018-03-11 01:02:50,271 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.Inputs.CreateIncidentInput
+DEBUG 2018-03-11 01:02:50,277 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.DTOs.IncidentDto
+DEBUG 2018-03-11 01:02:50,278 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.Web.Models.Incidents.Coordinates
+INFO  2018-03-11 01:02:51,291 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/  
+WARN  2018-03-11 01:02:51,416 [11   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+DEBUG 2018-03-11 01:04:48,821 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-03-11 01:04:48,949 [1    ] Abp.Modules.AbpModuleManager             - Found 10 ABP modules in total.
+DEBUG 2018-03-11 01:04:48,980 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.Web.Startup.HomelessWaysWebModule, Esendexers.HomelessWays.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:04:48,984 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.HomelessWaysApplicationModule, Esendexers.HomelessWays.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:04:48,985 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.HomelessWaysCoreModule, Esendexers.HomelessWays.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:04:48,985 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:04:48,985 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:04:48,986 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.EntityFrameworkCore.HomelessWaysEntityFrameworkCoreModule, Esendexers.HomelessWays.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:04:48,986 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:04:48,986 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:04:48,986 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:04:48,987 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:04:48,991 [1    ] Abp.Modules.AbpModuleManager             - 10 modules loaded.
+DEBUG 2018-03-11 01:04:49,227 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: Esendexers.HomelessWays.EntityFrameworkCore.HomelessWaysDbContext, Esendexers.HomelessWays.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:04:49,341 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-03-11 01:04:49,357 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-03-11 01:04:49,546 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: HomelessWays
+DEBUG 2018-03-11 01:04:49,547 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-03-11 01:04:49,932 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-03-11 01:04:49,994 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 3 classes define auto mapping attributes
+DEBUG 2018-03-11 01:04:49,994 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.Inputs.CreateIncidentInput
+DEBUG 2018-03-11 01:04:49,999 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.DTOs.IncidentDto
+DEBUG 2018-03-11 01:04:49,999 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.Web.Models.Incidents.Coordinates
+INFO  2018-03-11 01:04:50,920 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/  
+WARN  2018-03-11 01:04:51,029 [11   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-03-11 01:04:51,052 [11   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-03-11 01:04:51,379 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Esendexers.HomelessWays.Web.Controllers.HomeController.Index (Esendexers.HomelessWays.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-03-11 01:04:51,401 [11   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Web.Controllers.HomeController.Index is executed by an anonymous user in 56 ms from ::1 IP address with succeed.
+INFO  2018-03-11 01:04:54,117 [11   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+INFO  2018-03-11 01:04:55,294 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Esendexers.HomelessWays.Web.Controllers.HomeController.Index (Esendexers.HomelessWays.Web) in 3986.29ms
+INFO  2018-03-11 01:04:55,305 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4421.3079ms 200 text/html; charset=utf-8
+INFO  2018-03-11 01:04:55,346 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpServiceProxies/GetAll?v=636563270952581879  
+INFO  2018-03-11 01:04:55,425 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - ModelState is Valid
+INFO  2018-03-11 01:04:55,513 [17   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2018-03-11 01:04:55,519 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 130.6066ms
+INFO  2018-03-11 01:04:55,525 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 178.7819ms 200 application/x-javascript
+INFO  2018-03-11 01:04:56,344 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpScripts/GetScripts?v=636563270952590087  
+INFO  2018-03-11 01:04:56,363 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - ModelState is Valid
+INFO  2018-03-11 01:04:56,434 [11   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2018-03-11 01:04:56,439 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 83.4757ms
+INFO  2018-03-11 01:04:56,444 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 100.3702ms 200 application/x-javascript; charset=utf-8
+INFO  2018-03-11 01:07:16,400 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/Submit/RecordIncident application/json 103837
+INFO  2018-03-11 01:07:18,020 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Esendexers.HomelessWays.Web.Controllers.SubmitController.RecordIncident (Esendexers.HomelessWays.Web) with arguments (Esendexers.HomelessWays.Web.Models.Submit.IncidentModel) - ModelState is Valid
+INFO  2018-03-11 01:07:20,005 [11   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Services.ImageStorageService.UploadImageBytes is executed by an anonymous user in 1676 ms from ::1 IP address with succeed.
+INFO  2018-03-11 01:07:21,252 [11   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Services.LanguageAnalysysService.GetSentimentScore is executed by an anonymous user in 1003 ms from ::1 IP address with succeed.
+INFO  2018-03-11 01:07:22,247 [11   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Services.LanguageAnalysysService.GetKeyPrases is executed by an anonymous user in 993 ms from ::1 IP address with succeed.
+INFO  2018-03-11 01:07:25,447 [31   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Services.ImageAnalysisService.AnalyzeImage is executed by an anonymous user in 2161 ms from ::1 IP address with succeed.
+INFO  2018-03-11 01:07:25,603 [11   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Services.IncidentAppService.RecordNewIncident is executed by an anonymous user in 5377 ms from ::1 IP address with succeed.
+INFO  2018-03-11 01:07:25,696 [33   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Web.Controllers.SubmitController.RecordIncident is executed by an anonymous user in 7692 ms from ::1 IP address with succeed.
+INFO  2018-03-11 01:07:25,705 [33   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-03-11 01:07:25,723 [33   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Esendexers.HomelessWays.Web.Controllers.SubmitController.RecordIncident (Esendexers.HomelessWays.Web) in 9293.5853ms
+INFO  2018-03-11 01:07:25,731 [33   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9330.9938ms 200 application/json; charset=utf-8
+INFO  2018-03-11 01:07:40,592 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/  
+INFO  2018-03-11 01:07:40,600 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Esendexers.HomelessWays.Web.Controllers.HomeController.Index (Esendexers.HomelessWays.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-03-11 01:07:40,601 [17   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Web.Controllers.HomeController.Index is executed by an anonymous user in 7 ms from ::1 IP address with succeed.
+INFO  2018-03-11 01:07:40,607 [17   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+INFO  2018-03-11 01:07:40,615 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Esendexers.HomelessWays.Web.Controllers.HomeController.Index (Esendexers.HomelessWays.Web) in 16.8831ms
+INFO  2018-03-11 01:07:40,621 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 29.7836ms 200 text/html; charset=utf-8
+INFO  2018-03-11 01:07:40,642 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpServiceProxies/GetAll?v=636563272606099725  
+INFO  2018-03-11 01:07:40,649 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpScripts/GetScripts?v=636563272606099929  
+INFO  2018-03-11 01:07:40,679 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - ModelState is Valid
+INFO  2018-03-11 01:07:40,683 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - ModelState is Valid
+INFO  2018-03-11 01:07:40,688 [12   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2018-03-11 01:07:40,692 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 39.1941ms
+INFO  2018-03-11 01:07:40,697 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 55.4342ms 200 application/x-javascript
+INFO  2018-03-11 01:07:40,701 [11   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2018-03-11 01:07:40,708 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 53.3742ms
+INFO  2018-03-11 01:07:40,713 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 65.5731ms 200 application/x-javascript; charset=utf-8
+INFO  2018-03-11 01:07:45,245 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/Submit/RecordIncident application/json 103837
+INFO  2018-03-11 01:07:45,290 [33   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Esendexers.HomelessWays.Web.Controllers.SubmitController.RecordIncident (Esendexers.HomelessWays.Web) with arguments (Esendexers.HomelessWays.Web.Models.Submit.IncidentModel) - ModelState is Valid
+INFO  2018-03-11 01:07:52,513 [12   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Services.ImageStorageService.UploadImageBytes is executed by an anonymous user in 392 ms from ::1 IP address with succeed.
+INFO  2018-03-11 01:07:55,452 [12   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Services.LanguageAnalysysService.GetSentimentScore is executed by an anonymous user in 869 ms from ::1 IP address with succeed.
+INFO  2018-03-11 01:07:56,197 [12   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Services.LanguageAnalysysService.GetKeyPrases is executed by an anonymous user in 745 ms from ::1 IP address with succeed.
+INFO  2018-03-11 01:07:58,548 [17   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Services.ImageAnalysisService.AnalyzeImage is executed by an anonymous user in 2038 ms from ::1 IP address with succeed.
+INFO  2018-03-11 01:07:58,622 [12   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Services.IncidentAppService.RecordNewIncident is executed by an anonymous user in 4040 ms from ::1 IP address with succeed.
+INFO  2018-03-11 01:08:00,086 [31   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Web.Controllers.SubmitController.RecordIncident is executed by an anonymous user in 14816 ms from ::1 IP address with succeed.
+INFO  2018-03-11 01:08:00,091 [31   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-03-11 01:08:00,095 [31   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Esendexers.HomelessWays.Web.Controllers.SubmitController.RecordIncident (Esendexers.HomelessWays.Web) in 14845.7891ms
+INFO  2018-03-11 01:08:00,100 [31   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 14857.4436ms 200 application/json; charset=utf-8
+DEBUG 2018-03-11 01:11:40,801 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-03-11 01:11:40,900 [1    ] Abp.Modules.AbpModuleManager             - Found 10 ABP modules in total.
+DEBUG 2018-03-11 01:11:40,959 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.Web.Startup.HomelessWaysWebModule, Esendexers.HomelessWays.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:11:40,965 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.HomelessWaysApplicationModule, Esendexers.HomelessWays.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:11:40,965 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.HomelessWaysCoreModule, Esendexers.HomelessWays.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:11:40,966 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:11:40,966 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:11:40,967 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.EntityFrameworkCore.HomelessWaysEntityFrameworkCoreModule, Esendexers.HomelessWays.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:11:40,967 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:11:40,967 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:11:40,967 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:11:40,968 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:11:40,971 [1    ] Abp.Modules.AbpModuleManager             - 10 modules loaded.
+DEBUG 2018-03-11 01:11:41,213 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: Esendexers.HomelessWays.EntityFrameworkCore.HomelessWaysDbContext, Esendexers.HomelessWays.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:11:41,341 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-03-11 01:11:41,355 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-03-11 01:11:41,546 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: HomelessWays
+DEBUG 2018-03-11 01:11:41,548 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-03-11 01:11:41,943 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-03-11 01:11:42,023 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 3 classes define auto mapping attributes
+DEBUG 2018-03-11 01:11:42,023 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.Inputs.CreateIncidentInput
+DEBUG 2018-03-11 01:11:42,029 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.DTOs.IncidentDto
+DEBUG 2018-03-11 01:11:42,030 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.Web.Models.Incidents.Coordinates
+INFO  2018-03-11 01:11:42,969 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/  
+INFO  2018-03-11 01:11:42,969 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/Submit/RecordIncident application/json 103837
+WARN  2018-03-11 01:11:43,101 [12   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-03-11 01:11:43,126 [12   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-03-11 01:11:43,656 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Esendexers.HomelessWays.Web.Controllers.HomeController.Index (Esendexers.HomelessWays.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-03-11 01:11:43,815 [12   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Web.Controllers.HomeController.Index is executed by an anonymous user in 284 ms from ::1 IP address with succeed.
+INFO  2018-03-11 01:11:45,156 [18   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Esendexers.HomelessWays.Web.Controllers.SubmitController.RecordIncident (Esendexers.HomelessWays.Web) with arguments (Esendexers.HomelessWays.Web.Models.Submit.IncidentModel) - ModelState is Valid
+INFO  2018-03-11 01:12:03,972 [17   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Services.ImageStorageService.UploadImageBytes is executed by an anonymous user in 10991 ms from ::1 IP address with succeed.
+INFO  2018-03-11 01:12:06,681 [12   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+INFO  2018-03-11 01:12:07,302 [17   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Services.LanguageAnalysysService.GetSentimentScore is executed by an anonymous user in 1042 ms from ::1 IP address with succeed.
+INFO  2018-03-11 01:12:07,669 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Esendexers.HomelessWays.Web.Controllers.HomeController.Index (Esendexers.HomelessWays.Web) in 24232.7017ms
+INFO  2018-03-11 01:12:07,684 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 24770.1055ms 200 text/html; charset=utf-8
+INFO  2018-03-11 01:12:07,710 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpServiceProxies/GetAll?v=636563275276392189  
+INFO  2018-03-11 01:12:07,715 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpScripts/GetScripts?v=636563275276409203  
+INFO  2018-03-11 01:12:07,735 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - ModelState is Valid
+INFO  2018-03-11 01:12:07,744 [18   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - ModelState is Valid
+INFO  2018-03-11 01:12:07,818 [11   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2018-03-11 01:12:07,824 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 95.8812ms
+INFO  2018-03-11 01:12:07,829 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 113.6687ms 200 application/x-javascript; charset=utf-8
+INFO  2018-03-11 01:12:07,845 [18   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2018-03-11 01:12:07,851 [18   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 120.0479ms
+INFO  2018-03-11 01:12:07,859 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 146.7403ms 200 application/x-javascript
+INFO  2018-03-11 01:12:08,081 [17   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Services.LanguageAnalysysService.GetKeyPrases is executed by an anonymous user in 777 ms from ::1 IP address with succeed.
+INFO  2018-03-11 01:12:11,126 [18   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Services.ImageAnalysisService.AnalyzeImage is executed by an anonymous user in 2045 ms from ::1 IP address with succeed.
+INFO  2018-03-11 01:12:11,287 [17   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Services.IncidentAppService.RecordNewIncident is executed by an anonymous user in 5055 ms from ::1 IP address with succeed.
+INFO  2018-03-11 01:12:16,014 [19   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Web.Controllers.SubmitController.RecordIncident is executed by an anonymous user in 30881 ms from ::1 IP address with succeed.
+INFO  2018-03-11 01:12:16,029 [19   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-03-11 01:12:16,051 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Esendexers.HomelessWays.Web.Controllers.SubmitController.RecordIncident (Esendexers.HomelessWays.Web) in 32605.6573ms
+INFO  2018-03-11 01:12:16,058 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 33151.212ms 200 application/json; charset=utf-8
+DEBUG 2018-03-11 01:13:42,963 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-03-11 01:13:43,057 [1    ] Abp.Modules.AbpModuleManager             - Found 10 ABP modules in total.
+DEBUG 2018-03-11 01:13:43,114 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.Web.Startup.HomelessWaysWebModule, Esendexers.HomelessWays.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:13:43,117 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.HomelessWaysApplicationModule, Esendexers.HomelessWays.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:13:43,118 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.HomelessWaysCoreModule, Esendexers.HomelessWays.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:13:43,118 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:13:43,119 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:13:43,119 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.EntityFrameworkCore.HomelessWaysEntityFrameworkCoreModule, Esendexers.HomelessWays.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:13:43,119 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:13:43,119 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:13:43,120 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:13:43,120 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:13:43,124 [1    ] Abp.Modules.AbpModuleManager             - 10 modules loaded.
+DEBUG 2018-03-11 01:13:43,377 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: Esendexers.HomelessWays.EntityFrameworkCore.HomelessWaysDbContext, Esendexers.HomelessWays.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 01:13:43,521 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-03-11 01:13:43,535 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-03-11 01:13:43,774 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: HomelessWays
+DEBUG 2018-03-11 01:13:43,779 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-03-11 01:13:44,219 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-03-11 01:13:44,270 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 3 classes define auto mapping attributes
+DEBUG 2018-03-11 01:13:44,270 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.Inputs.CreateIncidentInput
+DEBUG 2018-03-11 01:13:44,274 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.DTOs.IncidentDto
+DEBUG 2018-03-11 01:13:44,274 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.Web.Models.Incidents.Coordinates
