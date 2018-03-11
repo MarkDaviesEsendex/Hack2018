@@ -62,8 +62,8 @@
       },
       "cordova-plugin-statusbar": {},
       "cordova-plugin-googlemaps": {
-        "API_KEY_FOR_ANDROID": "AIzaSyDU11h2rD3KF3rOfQW_dxnjeFl3WXE-LAQ",
-        "API_KEY_FOR_IOS": "AIzaSyDU11h2rD3KF3rOfQW_dxnjeFl3WXE-LAQ",
+        "API_KEY_FOR_ANDROID": "AIzaSyCgPFsv7s-0Jj869ZMCW6WuifEOF2EaNIo",
+        "API_KEY_FOR_IOS": "AIzaSyCgPFsv7s-0Jj869ZMCW6WuifEOF2EaNIo",
         "PLAY_SERVICES_VERSION": "11.8.0",
         "ANDROID_SUPPORT_V4_VERSION": "24.1.0"
       }
