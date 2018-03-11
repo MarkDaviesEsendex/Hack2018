@@ -1,14 +1,9 @@
 ﻿using System;
-using System.IO;
 using System.Threading.Tasks;
 using Esendexers.HomelessWays.Inputs;
 using Esendexers.HomelessWays.Services;
 using Esendexers.HomelessWays.Web.Models.Submit;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.WindowsAzure.Storage;
-using Microsoft.WindowsAzure.Storage.File;
-using Newtonsoft.Json;
-using SixLabors.ImageSharp;
 
 namespace Esendexers.HomelessWays.Web.Controllers
 {

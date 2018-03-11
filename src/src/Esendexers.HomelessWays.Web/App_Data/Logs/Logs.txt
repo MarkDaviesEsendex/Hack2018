@@ -7309,3 +7309,321 @@ INFO  2018-03-11 02:40:08,086 [12   ] Abp.Auditing.SimpleLogAuditingStore      -
 INFO  2018-03-11 02:40:08,096 [12   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
 INFO  2018-03-11 02:40:08,110 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Esendexers.HomelessWays.Web.Controllers.SubmitController.RecordIncident (Esendexers.HomelessWays.Web) in 23503.2262ms
 INFO  2018-03-11 02:40:08,115 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 23521.9607ms 200 application/json; charset=utf-8
+DEBUG 2018-03-11 10:09:25,551 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-03-11 10:09:25,862 [1    ] Abp.Modules.AbpModuleManager             - Found 10 ABP modules in total.
+DEBUG 2018-03-11 10:09:25,925 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.Web.Startup.HomelessWaysWebModule, Esendexers.HomelessWays.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 10:09:25,936 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.HomelessWaysApplicationModule, Esendexers.HomelessWays.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 10:09:25,937 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.HomelessWaysCoreModule, Esendexers.HomelessWays.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 10:09:25,938 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 10:09:25,938 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 10:09:25,938 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.EntityFrameworkCore.HomelessWaysEntityFrameworkCoreModule, Esendexers.HomelessWays.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 10:09:25,939 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 10:09:25,939 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 10:09:25,939 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 10:09:25,940 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 10:09:25,949 [1    ] Abp.Modules.AbpModuleManager             - 10 modules loaded.
+DEBUG 2018-03-11 10:09:26,545 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: Esendexers.HomelessWays.EntityFrameworkCore.HomelessWaysDbContext, Esendexers.HomelessWays.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 10:09:26,883 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-03-11 10:09:26,917 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-03-11 10:09:27,504 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: HomelessWays
+DEBUG 2018-03-11 10:09:27,509 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-03-11 10:09:28,394 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-03-11 10:09:28,537 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 3 classes define auto mapping attributes
+DEBUG 2018-03-11 10:09:28,537 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.Inputs.CreateIncidentInput
+DEBUG 2018-03-11 10:09:28,543 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.DTOs.IncidentDto
+DEBUG 2018-03-11 10:09:28,544 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.Web.Models.Incidents.Coordinates
+INFO  2018-03-11 10:09:30,136 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/  
+WARN  2018-03-11 10:09:30,346 [11   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-03-11 10:09:30,393 [11   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-03-11 10:09:31,089 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Esendexers.HomelessWays.Web.Controllers.HomeController.Index (Esendexers.HomelessWays.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-03-11 10:09:31,126 [11   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Web.Controllers.HomeController.Index is executed by an anonymous user in 102 ms from ::1 IP address with succeed.
+INFO  2018-03-11 10:09:36,929 [11   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+INFO  2018-03-11 10:09:39,030 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Esendexers.HomelessWays.Web.Controllers.HomeController.Index (Esendexers.HomelessWays.Web) in 8078.3917ms
+INFO  2018-03-11 10:09:39,114 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 8976.4096ms 200 text/html; charset=utf-8
+INFO  2018-03-11 10:09:39,146 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/lib/toastr/toastr.css  
+INFO  2018-03-11 10:09:39,152 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/css/main.css  
+INFO  2018-03-11 10:09:39,161 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/lib/jquery/dist/jquery.js  
+INFO  2018-03-11 10:09:39,171 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/lib/bootstrap-paper/bootstrap.css  
+INFO  2018-03-11 10:09:39,185 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/lib/font-awesome/css/font-awesome.css  
+INFO  2018-03-11 10:09:39,230 [17   ] NetCore.StaticFiles.StaticFileMiddleware - The file /css/main.css was not modified
+INFO  2018-03-11 10:09:39,248 [19   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/bootstrap-paper/bootstrap.css was not modified
+INFO  2018-03-11 10:09:39,288 [18   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/jquery/dist/jquery.js was not modified
+INFO  2018-03-11 10:09:39,315 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 136.2707ms 304 text/css
+INFO  2018-03-11 10:09:39,347 [12   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/toastr/toastr.css was not modified
+INFO  2018-03-11 10:09:39,373 [20   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/font-awesome/css/font-awesome.css was not modified
+INFO  2018-03-11 10:09:39,389 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 136.2443ms 304 text/css
+INFO  2018-03-11 10:09:39,420 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 257.8942ms 304 text/css
+INFO  2018-03-11 10:09:39,461 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 232.9259ms 304 text/css
+INFO  2018-03-11 10:09:39,492 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/lib/famfamfam-flags/dist/sprite/famfamfam-flags.css  
+INFO  2018-03-11 10:09:39,554 [19   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/famfamfam-flags/dist/sprite/famfamfam-flags.css was not modified
+INFO  2018-03-11 10:09:39,571 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 126.1002ms 304 text/css
+INFO  2018-03-11 10:09:39,586 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/lib/blockUI/jquery.blockUI.js  
+INFO  2018-03-11 10:09:39,603 [12   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/blockUI/jquery.blockUI.js was not modified
+INFO  2018-03-11 10:09:39,607 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 183.453ms 304 application/javascript
+INFO  2018-03-11 10:09:39,655 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 37.7833ms 304 application/javascript
+INFO  2018-03-11 10:09:39,689 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/lib/sweetalert/dist/sweetalert.css  
+INFO  2018-03-11 10:09:39,721 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/lib/jquery-validation/dist/jquery.validate.js  
+INFO  2018-03-11 10:09:39,754 [17   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/sweetalert/dist/sweetalert.css was not modified
+INFO  2018-03-11 10:09:39,757 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/lib/spin.js/jquery.spin.js  
+INFO  2018-03-11 10:09:39,793 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 126.8461ms 304 text/css
+INFO  2018-03-11 10:09:39,821 [19   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/spin.js/jquery.spin.js was not modified
+INFO  2018-03-11 10:09:39,825 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/lib/bootstrap/dist/js/bootstrap.js  
+INFO  2018-03-11 10:09:39,853 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 159.2475ms 304 application/javascript
+INFO  2018-03-11 10:09:39,906 [12   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/jquery-validation/dist/jquery.validate.js was not modified
+INFO  2018-03-11 10:09:39,975 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3  
+INFO  2018-03-11 10:09:39,986 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/lib/spin.js/spin.js  
+INFO  2018-03-11 10:09:39,991 [20   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/spin.js/spin.js was not modified
+INFO  2018-03-11 10:09:40,028 [19   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/font-awesome/fonts/fontawesome-webfont.woff2 was not modified
+INFO  2018-03-11 10:09:40,038 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 262.2802ms 304 application/javascript
+INFO  2018-03-11 10:09:40,070 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/AbpServiceProxies/GetAll?v=636563597789704163  
+INFO  2018-03-11 10:09:40,075 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 149.8522ms 304 font/woff2
+INFO  2018-03-11 10:09:40,115 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/lib/moment/min/moment-with-locales.js  
+INFO  2018-03-11 10:09:40,131 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/bootstrap/dist/js/bootstrap.js was not modified
+INFO  2018-03-11 10:09:40,158 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 600.841ms 304 application/javascript
+INFO  2018-03-11 10:09:40,196 [18   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/moment/min/moment-with-locales.js was not modified
+INFO  2018-03-11 10:09:40,248 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.blockUI.js  
+INFO  2018-03-11 10:09:40,255 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 252.4767ms 304 application/javascript
+INFO  2018-03-11 10:09:40,281 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 225.5959ms 304 application/javascript
+INFO  2018-03-11 10:09:40,343 [19   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/abp-web-resources/Abp/Framework/scripts/libs/abp.blockUI.js was not modified
+INFO  2018-03-11 10:09:40,403 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 219.3128ms 304 application/javascript
+INFO  2018-03-11 10:09:40,432 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.toastr.js  
+INFO  2018-03-11 10:09:40,462 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/lib/toastr/toastr.js  
+INFO  2018-03-11 10:09:40,474 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/toastr/toastr.js was not modified
+INFO  2018-03-11 10:09:40,505 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/AbpScripts/GetScripts?v=636563597789713155  
+INFO  2018-03-11 10:09:40,519 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/lib/sweetalert/dist/sweetalert-dev.js  
+INFO  2018-03-11 10:09:40,533 [18   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/sweetalert/dist/sweetalert-dev.js was not modified
+INFO  2018-03-11 10:09:40,555 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 228.8204ms 304 application/javascript
+INFO  2018-03-11 10:09:40,578 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/lib/abp-web-resources/Abp/Framework/scripts/abp.js  
+INFO  2018-03-11 10:09:40,614 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.sweet-alert.js  
+INFO  2018-03-11 10:09:40,621 [18   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/abp-web-resources/Abp/Framework/scripts/abp.js was not modified
+INFO  2018-03-11 10:09:40,669 [20   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/abp-web-resources/Abp/Framework/scripts/libs/abp.toastr.js was not modified
+INFO  2018-03-11 10:09:40,698 [19   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/abp-web-resources/Abp/Framework/scripts/libs/abp.sweet-alert.js was not modified
+INFO  2018-03-11 10:09:40,738 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 54.338ms 304 application/javascript
+INFO  2018-03-11 10:09:40,775 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 116.0206ms 304 application/javascript
+INFO  2018-03-11 10:09:40,817 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 256.2136ms 304 application/javascript
+INFO  2018-03-11 10:09:40,824 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 293.7923ms 304 application/javascript
+INFO  2018-03-11 10:09:40,873 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - ModelState is Valid
+INFO  2018-03-11 10:09:40,904 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/js/views/home/index.js  
+INFO  2018-03-11 10:09:40,938 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.jquery.js  
+INFO  2018-03-11 10:09:40,941 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/lib/json2/json2.js  
+INFO  2018-03-11 10:09:40,971 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/abp-web-resources/Abp/Framework/scripts/libs/abp.jquery.js was not modified
+INFO  2018-03-11 10:09:41,002 [19   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/json2/json2.js was not modified
+INFO  2018-03-11 10:09:41,081 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.spin.js  
+INFO  2018-03-11 10:09:41,103 [18   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/abp-web-resources/Abp/Framework/scripts/libs/abp.spin.js was not modified
+INFO  2018-03-11 10:09:41,125 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 70.259ms 304 application/javascript
+INFO  2018-03-11 10:09:41,139 [20   ] NetCore.StaticFiles.StaticFileMiddleware - The file /js/views/home/index.js was not modified
+INFO  2018-03-11 10:09:41,159 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 159.1089ms 304 application/javascript
+INFO  2018-03-11 10:09:41,239 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 299.1802ms 304 application/javascript
+INFO  2018-03-11 10:09:41,256 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - ModelState is Valid
+INFO  2018-03-11 10:09:41,273 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 99.366ms 304 application/javascript
+INFO  2018-03-11 10:09:41,484 [12   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2018-03-11 10:09:41,507 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 900.9199ms
+INFO  2018-03-11 10:09:41,521 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1037.2563ms 200 application/x-javascript; charset=utf-8
+INFO  2018-03-11 10:09:41,544 [17   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2018-03-11 10:09:41,556 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 923.3836ms
+INFO  2018-03-11 10:09:41,569 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1502.5151ms 200 application/x-javascript
+INFO  2018-03-11 10:09:41,809 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/favicon.ico  
+INFO  2018-03-11 10:09:41,835 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 28.0494ms 404 
+INFO  2018-03-11 10:21:17,311 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/swagger/  
+INFO  2018-03-11 10:21:17,335 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 15.0862ms 404 
+INFO  2018-03-11 10:21:23,355 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/  
+INFO  2018-03-11 10:21:23,364 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Esendexers.HomelessWays.Web.Controllers.HomeController.Index (Esendexers.HomelessWays.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-03-11 10:21:23,365 [11   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Web.Controllers.HomeController.Index is executed by an anonymous user in 7 ms from ::1 IP address with succeed.
+INFO  2018-03-11 10:21:23,374 [11   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+INFO  2018-03-11 10:21:23,391 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Esendexers.HomelessWays.Web.Controllers.HomeController.Index (Esendexers.HomelessWays.Web) in 26.8583ms
+INFO  2018-03-11 10:21:23,397 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 49.069ms 200 text/html; charset=utf-8
+INFO  2018-03-11 10:21:23,458 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/AbpServiceProxies/GetAll?v=636563604833797435  
+INFO  2018-03-11 10:21:23,462 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/AbpScripts/GetScripts?v=636563604833797656  
+INFO  2018-03-11 10:21:23,494 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - ModelState is Valid
+INFO  2018-03-11 10:21:23,504 [24   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - ModelState is Valid
+INFO  2018-03-11 10:21:23,512 [24   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2018-03-11 10:21:23,521 [24   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 49.6648ms
+INFO  2018-03-11 10:21:23,547 [11   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2018-03-11 10:21:23,555 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 78.0081ms 200 application/x-javascript
+INFO  2018-03-11 10:21:23,580 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 86.9883ms
+INFO  2018-03-11 10:21:23,595 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 126.5403ms 200 application/x-javascript; charset=utf-8
+DEBUG 2018-03-11 10:24:47,422 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-03-11 10:24:48,063 [1    ] Abp.Modules.AbpModuleManager             - Found 10 ABP modules in total.
+DEBUG 2018-03-11 10:24:48,161 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.Web.Startup.HomelessWaysWebModule, Esendexers.HomelessWays.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 10:24:48,167 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.HomelessWaysApplicationModule, Esendexers.HomelessWays.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 10:24:48,169 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.HomelessWaysCoreModule, Esendexers.HomelessWays.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 10:24:48,171 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 10:24:48,171 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 10:24:48,173 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.EntityFrameworkCore.HomelessWaysEntityFrameworkCoreModule, Esendexers.HomelessWays.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 10:24:48,173 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 10:24:48,175 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 10:24:48,176 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 10:24:48,177 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 10:24:48,183 [1    ] Abp.Modules.AbpModuleManager             - 10 modules loaded.
+DEBUG 2018-03-11 10:24:49,287 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: Esendexers.HomelessWays.EntityFrameworkCore.HomelessWaysDbContext, Esendexers.HomelessWays.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 10:24:49,738 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-03-11 10:24:49,773 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-03-11 10:24:50,245 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: HomelessWays
+DEBUG 2018-03-11 10:24:50,253 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-03-11 10:24:51,374 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-03-11 10:24:51,548 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 3 classes define auto mapping attributes
+DEBUG 2018-03-11 10:24:51,549 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.Inputs.CreateIncidentInput
+DEBUG 2018-03-11 10:24:51,557 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.DTOs.IncidentDto
+DEBUG 2018-03-11 10:24:51,558 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.Web.Models.Incidents.Coordinates
+INFO  2018-03-11 10:24:53,413 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/  
+WARN  2018-03-11 10:24:53,743 [11   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-03-11 10:24:53,782 [11   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-03-11 10:24:55,563 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Esendexers.HomelessWays.Web.Controllers.HomeController.Index (Esendexers.HomelessWays.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-03-11 10:24:55,610 [11   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Web.Controllers.HomeController.Index is executed by an anonymous user in 109 ms from ::1 IP address with succeed.
+INFO  2018-03-11 10:25:08,581 [11   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+INFO  2018-03-11 10:25:10,689 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Esendexers.HomelessWays.Web.Controllers.HomeController.Index (Esendexers.HomelessWays.Web) in 15274.0779ms
+INFO  2018-03-11 10:25:10,718 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 17394.3894ms 200 text/html; charset=utf-8
+INFO  2018-03-11 10:25:10,740 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/AbpScripts/GetScripts?v=636563607106319191  
+INFO  2018-03-11 10:25:10,782 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/AbpServiceProxies/GetAll?v=636563607106311187  
+INFO  2018-03-11 10:25:10,866 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - ModelState is Valid
+INFO  2018-03-11 10:25:10,918 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - ModelState is Valid
+INFO  2018-03-11 10:25:11,165 [12   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2018-03-11 10:25:11,177 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 349.9358ms
+INFO  2018-03-11 10:25:11,182 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 449.9442ms 200 application/x-javascript; charset=utf-8
+INFO  2018-03-11 10:25:11,249 [11   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2018-03-11 10:25:11,265 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 398.7208ms
+INFO  2018-03-11 10:25:11,278 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 491.9037ms 200 application/x-javascript
+INFO  2018-03-11 10:25:11,419 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/favicon.ico  
+INFO  2018-03-11 10:25:11,429 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 11.4417ms 404 
+INFO  2018-03-11 10:25:48,780 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/Invaders  
+INFO  2018-03-11 10:25:48,802 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Esendexers.HomelessWays.Web.Controllers.InvadersController.Index (Esendexers.HomelessWays.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-03-11 10:25:48,804 [12   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Web.Controllers.InvadersController.Index is executed by an anonymous user in 13 ms from ::1 IP address with succeed.
+INFO  2018-03-11 10:25:49,093 [12   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Invaders/Index.cshtml.
+INFO  2018-03-11 10:25:49,127 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Esendexers.HomelessWays.Web.Controllers.InvadersController.Index (Esendexers.HomelessWays.Web) in 330.957ms
+INFO  2018-03-11 10:25:49,137 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 357.7363ms 200 text/html; charset=utf-8
+INFO  2018-03-11 10:25:49,207 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/AbpServiceProxies/GetAll?v=636563607491205518  
+INFO  2018-03-11 10:25:49,219 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/AbpScripts/GetScripts?v=636563607491205854  
+INFO  2018-03-11 10:25:49,246 [25   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - ModelState is Valid
+INFO  2018-03-11 10:25:49,273 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - ModelState is Valid
+INFO  2018-03-11 10:25:49,302 [17   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2018-03-11 10:25:49,312 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 83.2328ms
+INFO  2018-03-11 10:25:49,341 [25   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2018-03-11 10:25:49,349 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 140.7756ms 200 application/x-javascript
+INFO  2018-03-11 10:25:49,374 [25   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 126.5194ms
+INFO  2018-03-11 10:25:49,388 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 200.9871ms 200 application/x-javascript; charset=utf-8
+INFO  2018-03-11 10:27:15,801 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/  
+INFO  2018-03-11 10:27:15,854 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Esendexers.HomelessWays.Web.Controllers.HomeController.Index (Esendexers.HomelessWays.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-03-11 10:27:15,854 [11   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Web.Controllers.HomeController.Index is executed by an anonymous user in 6 ms from ::1 IP address with succeed.
+INFO  2018-03-11 10:27:15,868 [11   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+INFO  2018-03-11 10:27:15,887 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Esendexers.HomelessWays.Web.Controllers.HomeController.Index (Esendexers.HomelessWays.Web) in 25.1658ms
+INFO  2018-03-11 10:27:15,908 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 103.7634ms 200 text/html; charset=utf-8
+INFO  2018-03-11 10:27:15,967 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/AbpScripts/GetScripts?v=636563608358706430  
+INFO  2018-03-11 10:27:15,971 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/AbpServiceProxies/GetAll?v=636563608358706197  
+INFO  2018-03-11 10:27:16,004 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - ModelState is Valid
+INFO  2018-03-11 10:27:16,013 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - ModelState is Valid
+INFO  2018-03-11 10:27:16,019 [12   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2018-03-11 10:27:16,030 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 46.5873ms
+INFO  2018-03-11 10:27:16,035 [11   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2018-03-11 10:27:16,042 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 95.266ms 200 application/x-javascript
+INFO  2018-03-11 10:27:16,051 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 65.8323ms
+INFO  2018-03-11 10:27:16,065 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 113.7455ms 200 application/x-javascript; charset=utf-8
+INFO  2018-03-11 10:31:05,598 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/Home/About  
+INFO  2018-03-11 10:31:05,611 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Esendexers.HomelessWays.Web.Controllers.HomeController.About (Esendexers.HomelessWays.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-03-11 10:31:05,615 [11   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Web.Controllers.HomeController.About is executed by an anonymous user in 9 ms from ::1 IP address with succeed.
+INFO  2018-03-11 10:31:05,891 [11   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/About.cshtml.
+INFO  2018-03-11 10:31:05,911 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Esendexers.HomelessWays.Web.Controllers.HomeController.About (Esendexers.HomelessWays.Web) in 300.8232ms
+INFO  2018-03-11 10:31:05,924 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 324.6897ms 200 text/html; charset=utf-8
+INFO  2018-03-11 10:31:05,962 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/AbpScripts/GetScripts?v=636563610659058217  
+INFO  2018-03-11 10:31:05,989 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - ModelState is Valid
+INFO  2018-03-11 10:31:06,004 [28   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/AbpServiceProxies/GetAll?v=636563610659058023  
+INFO  2018-03-11 10:31:06,015 [17   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2018-03-11 10:31:06,047 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 43.5164ms
+INFO  2018-03-11 10:31:06,054 [28   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - ModelState is Valid
+INFO  2018-03-11 10:31:06,058 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 102.8382ms 200 application/x-javascript; charset=utf-8
+INFO  2018-03-11 10:31:06,086 [28   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2018-03-11 10:31:06,117 [28   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 79.8246ms
+INFO  2018-03-11 10:31:06,124 [28   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 128.9313ms 200 application/x-javascript
+INFO  2018-03-11 10:31:07,652 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/  
+INFO  2018-03-11 10:31:07,661 [30   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Esendexers.HomelessWays.Web.Controllers.HomeController.Index (Esendexers.HomelessWays.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-03-11 10:31:07,663 [30   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Web.Controllers.HomeController.Index is executed by an anonymous user in 6 ms from ::1 IP address with succeed.
+INFO  2018-03-11 10:31:07,674 [30   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+INFO  2018-03-11 10:31:07,686 [30   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Esendexers.HomelessWays.Web.Controllers.HomeController.Index (Esendexers.HomelessWays.Web) in 20.8043ms
+INFO  2018-03-11 10:31:07,694 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 45.1994ms 200 text/html; charset=utf-8
+INFO  2018-03-11 10:31:07,748 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/AbpScripts/GetScripts?v=636563610676765588  
+INFO  2018-03-11 10:31:07,755 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/AbpServiceProxies/GetAll?v=636563610676765000  
+INFO  2018-03-11 10:31:07,783 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - ModelState is Valid
+INFO  2018-03-11 10:31:07,789 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - ModelState is Valid
+INFO  2018-03-11 10:31:07,793 [17   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2018-03-11 10:31:07,803 [12   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2018-03-11 10:31:07,808 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 37.2373ms
+INFO  2018-03-11 10:31:07,840 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 51.9285ms
+INFO  2018-03-11 10:31:07,847 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 97.9446ms 200 application/x-javascript
+INFO  2018-03-11 10:31:07,857 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 123.3004ms 200 application/x-javascript; charset=utf-8
+DEBUG 2018-03-11 10:47:45,526 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-03-11 10:47:45,712 [1    ] Abp.Modules.AbpModuleManager             - Found 10 ABP modules in total.
+DEBUG 2018-03-11 10:47:45,810 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.Web.Startup.HomelessWaysWebModule, Esendexers.HomelessWays.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 10:47:45,821 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.HomelessWaysApplicationModule, Esendexers.HomelessWays.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 10:47:45,822 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.HomelessWaysCoreModule, Esendexers.HomelessWays.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 10:47:45,826 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 10:47:45,827 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 10:47:45,828 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Esendexers.HomelessWays.EntityFrameworkCore.HomelessWaysEntityFrameworkCoreModule, Esendexers.HomelessWays.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 10:47:45,829 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 10:47:45,830 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 10:47:45,830 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 10:47:45,831 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.4.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 10:47:45,844 [1    ] Abp.Modules.AbpModuleManager             - 10 modules loaded.
+DEBUG 2018-03-11 10:47:46,371 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: Esendexers.HomelessWays.EntityFrameworkCore.HomelessWaysDbContext, Esendexers.HomelessWays.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-11 10:47:46,596 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-03-11 10:47:46,622 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-03-11 10:47:47,008 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: HomelessWays
+DEBUG 2018-03-11 10:47:47,011 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-03-11 10:47:47,645 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-03-11 10:47:47,753 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 3 classes define auto mapping attributes
+DEBUG 2018-03-11 10:47:47,753 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.Inputs.CreateIncidentInput
+DEBUG 2018-03-11 10:47:47,764 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.DTOs.IncidentDto
+DEBUG 2018-03-11 10:47:47,765 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Esendexers.HomelessWays.Web.Models.Incidents.Coordinates
+INFO  2018-03-11 10:47:49,384 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/  
+WARN  2018-03-11 10:47:49,615 [12   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-03-11 10:47:49,658 [12   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-03-11 10:47:50,452 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Esendexers.HomelessWays.Web.Controllers.HomeController.Index (Esendexers.HomelessWays.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-03-11 10:47:50,501 [12   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Web.Controllers.HomeController.Index is executed by an anonymous user in 108 ms from ::1 IP address with succeed.
+INFO  2018-03-11 10:47:56,339 [12   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+INFO  2018-03-11 10:47:58,478 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Esendexers.HomelessWays.Web.Controllers.HomeController.Index (Esendexers.HomelessWays.Web) in 8179.5411ms
+INFO  2018-03-11 10:47:58,542 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9190.6941ms 200 text/html; charset=utf-8
+INFO  2018-03-11 10:47:58,558 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/AbpScripts/GetScripts?v=636563620784014379  
+INFO  2018-03-11 10:47:58,596 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/AbpServiceProxies/GetAll?v=636563620783954953  
+INFO  2018-03-11 10:47:58,689 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - ModelState is Valid
+INFO  2018-03-11 10:47:58,757 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - ModelState is Valid
+INFO  2018-03-11 10:47:59,027 [11   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2018-03-11 10:47:59,038 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 398.4514ms
+INFO  2018-03-11 10:47:59,043 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 493.2039ms 200 application/x-javascript; charset=utf-8
+INFO  2018-03-11 10:47:59,078 [12   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2018-03-11 10:47:59,092 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 406.9274ms
+INFO  2018-03-11 10:47:59,100 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 503.47ms 200 application/x-javascript
+INFO  2018-03-11 10:49:53,325 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/Incidents  
+INFO  2018-03-11 10:49:55,691 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Esendexers.HomelessWays.Web.Controllers.IncidentsController.Index (Esendexers.HomelessWays.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-03-11 10:49:55,692 [11   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Web.Controllers.IncidentsController.Index is executed by an anonymous user in 5 ms from ::1 IP address with succeed.
+INFO  2018-03-11 10:49:56,464 [11   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Incidents/Index.cshtml.
+INFO  2018-03-11 10:49:56,607 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Esendexers.HomelessWays.Web.Controllers.IncidentsController.Index (Esendexers.HomelessWays.Web) in 3268.3724ms
+INFO  2018-03-11 10:49:56,621 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3289.9938ms 200 text/html; charset=utf-8
+INFO  2018-03-11 10:49:56,700 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/AbpServiceProxies/GetAll?v=636563621966000199  
+INFO  2018-03-11 10:49:56,705 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/AbpScripts/GetScripts?v=636563621966000665  
+INFO  2018-03-11 10:49:56,732 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - ModelState is Valid
+INFO  2018-03-11 10:49:56,737 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - ModelState is Valid
+INFO  2018-03-11 10:49:56,746 [12   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2018-03-11 10:49:56,757 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 40.9319ms
+INFO  2018-03-11 10:49:56,766 [11   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2018-03-11 10:49:56,797 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 60.7589ms
+INFO  2018-03-11 10:49:56,804 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 100.2142ms 200 application/x-javascript
+INFO  2018-03-11 10:49:56,835 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 130.1603ms 200 application/x-javascript; charset=utf-8
+INFO  2018-03-11 10:51:07,019 [34   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:53262/Incidents/Create multipart/form-data; boundary=----WebKitFormBoundaryFWgNTFJbyIeE60Ny 9490
+INFO  2018-03-11 10:51:07,317 [34   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Esendexers.HomelessWays.Web.Controllers.IncidentsController.Create (Esendexers.HomelessWays.Web) with arguments (Esendexers.HomelessWays.Web.Models.Incidents.IncidentViewModel) - ModelState is Valid
+INFO  2018-03-11 10:51:09,152 [34   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Services.LanguageAnalysysService.GetSentimentScore is executed by an anonymous user in 1658 ms from ::1 IP address with succeed.
+INFO  2018-03-11 10:51:10,036 [34   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Services.LanguageAnalysysService.GetKeyPrases is executed by an anonymous user in 881 ms from ::1 IP address with succeed.
+INFO  2018-03-11 10:51:12,208 [11   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Services.ImageAnalysisService.AnalyzeImage is executed by an anonymous user in 2126 ms from ::1 IP address with succeed.
+INFO  2018-03-11 10:51:16,409 [34   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Services.IncidentAppService.RecordNewIncident is executed by an anonymous user in 8990 ms from ::1 IP address with succeed.
+INFO  2018-03-11 10:51:17,890 [12   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Services.ImageStorageService.UploadImageBytes is executed by an anonymous user in 1479 ms from ::1 IP address with succeed.
+INFO  2018-03-11 10:51:18,144 [32   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Esendexers.HomelessWays.Web.Controllers.IncidentsController.Create is executed by an anonymous user in 10844 ms from ::1 IP address with succeed.
+INFO  2018-03-11 10:51:18,150 [32   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Incidents/Index.cshtml.
+INFO  2018-03-11 10:51:18,173 [32   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Esendexers.HomelessWays.Web.Controllers.IncidentsController.Create (Esendexers.HomelessWays.Web) in 11110.3803ms
+INFO  2018-03-11 10:51:18,182 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 11162.7008ms 200 text/html; charset=utf-8
+INFO  2018-03-11 10:51:18,243 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/AbpScripts/GetScripts?v=636563622781636511  
+INFO  2018-03-11 10:51:18,247 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:53262/AbpServiceProxies/GetAll?v=636563622781636309  
+INFO  2018-03-11 10:51:18,286 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - ModelState is Valid
+INFO  2018-03-11 10:51:18,294 [32   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - ModelState is Valid
+INFO  2018-03-11 10:51:18,324 [32   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2018-03-11 10:51:18,330 [32   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 77.1212ms
+INFO  2018-03-11 10:51:18,342 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 103.8938ms 200 application/x-javascript
+INFO  2018-03-11 10:51:18,353 [11   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2018-03-11 10:51:18,364 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 105.4918ms
+INFO  2018-03-11 10:51:18,374 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 150.5404ms 200 application/x-javascript; charset=utf-8

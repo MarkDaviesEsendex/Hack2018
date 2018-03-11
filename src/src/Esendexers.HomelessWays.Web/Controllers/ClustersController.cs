@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Esendexers.HomelessWays.Models;
 using Esendexers.HomelessWays.Services;
