@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, LoadingController } from 'ionic-angular';
 import { GoogleMapsProvider } from '../../providers/google-maps/google-maps';
 import { GoogleMap } from '@ionic-native/google-maps';
 
@@ -13,14 +13,17 @@ import { GoogleMap } from '@ionic-native/google-maps';
 export class MapPage {
   map: GoogleMap;
 
-  constructor(private googleMapsProvider: GoogleMapsProvider) {
+  constructor(private googleMapsProvider: GoogleMapsProvider, private loadingCtrl: LoadingController) {
   }
 
   ionViewDidLoad(): void {
     console.log('[MAP] Loading up map');
+    const spinner = this.loadingCtrl.create({ content: "Getting map" });
+    spinner.present();
     this.googleMapsProvider.loadMap('mapthing').then((map) => {
       this.map = map;
-      console.log(`[MAP] Map Loaded: ${JSON.stringify(this.map)}`);
+      this.googleMapsProvider.addMarkersToMap();
+      spinner.dismissAll();
     });
 
   }

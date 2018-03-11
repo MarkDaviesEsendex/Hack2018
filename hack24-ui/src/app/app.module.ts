@@ -16,12 +16,15 @@ import { IncidentHttpProvider } from '../providers/incident-http/incident-http';
 import { HttpClientModule } from '@angular/common/http';
 import { GoogleMapsProvider } from '../providers/google-maps/google-maps';
 import { MapPage } from '../pages/map/map';
+import { MapByTagPage } from '../pages/map-by-tag/map-by-tag';
+import { TagsProvider } from '../providers/tags/tags';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    MapPage
+    MapPage,
+    MapByTagPage
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,8 @@ import { MapPage } from '../pages/map/map';
   entryComponents: [
     MyApp,
     HomePage,
-    MapPage
+    MapPage,
+    MapByTagPage
   ],
   providers: [
     StatusBar,
@@ -44,7 +48,8 @@ import { MapPage } from '../pages/map/map';
     GeolocationProvider,
     IncidentHttpProvider,
     GoogleMaps,
-    GoogleMapsProvider
+    GoogleMapsProvider,
+    TagsProvider
   ]
 })
 export class AppModule { }
