@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace Esendexers.HomelessWays.Web.Startup
 {
@@ -25,6 +26,12 @@ namespace Esendexers.HomelessWays.Web.Startup
             services.AddMvc(options =>
             {
                 options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
+            });
+
+            services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("v1", new Info {Title = "Hack24", Version = "v1"});
+                options.DocInclusionPredicate((docName, description) => true);
             });
 
             //Configure Abp and Dependency Injection
@@ -52,6 +59,15 @@ namespace Esendexers.HomelessWays.Web.Startup
             }
 
             app.UseStaticFiles();
+
+            app.UseSwagger();
+            app.UseSwaggerUI(options =>
+            {
+//                options.InjectOnCompleteJavaScript("/swagger/ui/abp.js");
+//                options.InjectOnCompleteJavaScript("/swagger/ui/on-complete.js");
+                options.SwaggerEndpoint("/swagger/v1/swagger.json", "Hack24 API V1");
+            });
+
 
             app.UseMvc(routes =>
             {
