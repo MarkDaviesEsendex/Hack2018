@@ -27,7 +27,8 @@ namespace Esendexers.HomelessWays.Services
         {
             var imageDirectory = GetImageDirectory();
             var file = imageDirectory.GetFileReference(imageName);
-            return file.Uri.ToString();
+            return file.Uri.ToString() +
+                   "?sv=2017-07-29&ss=bfqt&srt=sco&sp=rwdlacup&se=2018-03-11T19:49:13Z&st=2018-03-11T11:49:13Z&spr=https&sig=snAM2gRbXtMO9L1ItjYIyXT0L1UQb7VYiQtBJQ1bpNM%3D";
         }
 
         private static CloudFileDirectory GetImageDirectory()
