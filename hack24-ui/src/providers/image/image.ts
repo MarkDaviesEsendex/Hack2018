@@ -16,7 +16,7 @@ export class ImageProvider {
     return this.camera.getPicture(this.options).then((imageData) => {
       // imageData is either a base64 encoded string or a file URI
       // If it's base64:
-      const base64Image = imageData;
+      const base64Image = 'data:image/jpeg;base64,' + imageData;
       return base64Image;
     }, (err) => {
       return err;
