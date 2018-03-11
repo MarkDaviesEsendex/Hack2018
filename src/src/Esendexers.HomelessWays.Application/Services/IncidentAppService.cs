@@ -17,6 +17,7 @@ namespace Esendexers.HomelessWays.Services
 
         Task<IEnumerable<IncidentDto>> GetIncidentsAroundLocationWithTag(double latitude, double longitude, uint radius, string tag);
         Task<IEnumerable<IncidentDto>> GetIncidentsWithTag(string tag);
+        Task<IEnumerable<IncidentDto>> GetIncidentsAroundLocationOrderBySentiment(double latitude, double longitude, uint radius);
     }
 
     public class IncidentAppService : HomelessWaysAppServiceBase, IIncidentAppService
@@ -54,12 +55,12 @@ namespace Esendexers.HomelessWays.Services
                     ? _tagRepository.InsertAndGetId(new Tag {Name = phrase})
                     : databasePhrase.Id).ToList();
 
-//            var imageTags = _imageAnalysisService.AnalyzeImage(incidentRequest.ImageBytes).Result.Description.Tags;
-//            incidentTags.AddRange((from imageTag in imageTags
-//                let databasePhrase = _tagRepository.GetAll().FirstOrDefault(tag => tag.Name == imageTag)
-//                select databasePhrase == null
-//                    ? _tagRepository.InsertAndGetId(new Tag {Name = imageTag})
-//                    : databasePhrase.Id).ToList());
+            var imageTags = _imageAnalysisService.AnalyzeImage(incidentRequest.ImageBytes).Result.Description.Tags;
+            incidentTags.AddRange((from imageTag in imageTags
+                let databasePhrase = _tagRepository.GetAll().FirstOrDefault(tag => tag.Name == imageTag)
+                select databasePhrase == null
+                    ? _tagRepository.InsertAndGetId(new Tag {Name = imageTag})
+                    : databasePhrase.Id).ToList());
 
             incident.ImageId = _imageRepository.InsertAndGetId(new Image { ImagePath = incidentRequest.ImageName });
             var incidentId = _incidentRepository.InsertAndGetId(incident);
@@ -77,6 +78,15 @@ namespace Esendexers.HomelessWays.Services
             return (await _incidentRepository.GetAllListAsync()).ToList()
                 .Select(i => Map(i, radius, currentCoordinate))
                 .Where(i => i != null)
+                .ToList();
+        }
+        public async Task<IEnumerable<IncidentDto>> GetIncidentsAroundLocationOrderBySentiment(double latitude, double longitude, uint radius)
+        {
+            var currentCoordinate = new GeoCoordinate(latitude, longitude);
+            return (await _incidentRepository.GetAllListAsync()).ToList()
+                .Select(i => Map(i, radius, currentCoordinate))
+                .Where(i => i != null)
+                .OrderBy(dto => dto.PositivitySentimentScore)
                 .ToList();
         }
 
