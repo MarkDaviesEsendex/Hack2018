@@ -76,7 +76,7 @@ namespace Esendexers.HomelessWays.Services
         {
             var currentCoordinate = new GeoCoordinate(latitude, longitude);
             var answers = (await _incidentRepository.GetAllListAsync()).ToList()
-                .Select(async i => await Map(i, radius, currentCoordinate))
+                .Select(async i => await MapNearby(i, radius, currentCoordinate))
                 .Where(i => i != null);
 
             return answers.Select(task => task.Result).ToList();
@@ -85,7 +85,7 @@ namespace Esendexers.HomelessWays.Services
         {
             var currentCoordinate = new GeoCoordinate(latitude, longitude);
             var incidentDtos = (await _incidentRepository.GetAllListAsync()).ToList()
-                .Select(async i => await Map(i, radius, currentCoordinate))
+                .Select(async i => await MapNearby(i, radius, currentCoordinate))
                 .Where(i => i != null)
                 .OrderBy(dto => dto.Result.PositivitySentimentScore)
                 .ToList();
@@ -107,7 +107,12 @@ namespace Esendexers.HomelessWays.Services
 
         public async Task<IEnumerable<IncidentDto>> GetIncidentsWithTag(string tag)
         {
-            var incidents = ObjectMapper.Map<List<IncidentDto>>(await _incidentRepository.GetAllListAsync());
+            var allIncidents = await _incidentRepository.GetAllListAsync();
+            var incidents = new List<IncidentDto>();
+            foreach (var incident in allIncidents)
+            {
+                incidents.Add(await Map(incident));
+            }
 
             var tagsWithNameIds = (await _tagRepository.GetAllListAsync()).Where(dbTag => dbTag.Name == tag).Select(dbTag => dbTag.Id);
 
@@ -118,18 +123,21 @@ namespace Esendexers.HomelessWays.Services
             return incidents.Where(dto => incidentTags.Any(incidentTag => incidentTag.IncidentId == dto.Id));
         }
 
-
-        private async Task<IncidentDto> Map(Incident incident, uint radius, GeoCoordinate currentCoordinate)
+        private async Task<IncidentDto> MapNearby(Incident incident, uint radius, GeoCoordinate currentCoordinate)
         {
             var incidentCoordinate = new GeoCoordinate(double.Parse(incident.Latitude), double.Parse(incident.Longitude));
             var returnMe = currentCoordinate.GetDistanceTo(incidentCoordinate) < radius ? _objectMapper.Map<IncidentDto>(incident) : null;
             if (returnMe != null)
-            {
-                returnMe.ImagePath = (await _imageRepository.GetAllListAsync()).Where(image => image.Id == incident.ImageId)
-                    .Select(image => image.ImagePath).FirstOrDefault();
-            }
+                returnMe.ImagePath = (await _imageRepository.GetAsync(incident.ImageId)).ImagePath;
 
             return returnMe;
         }
+
+//        private async Task<IncidentDto> Map(Incident incidentToMap)
+//        {
+//            var imagePath = (await _imageRepository.GetAsync(incidentToMap.ImageId)).ImagePath;
+//
+//            return new
+//        }
     }
 }
