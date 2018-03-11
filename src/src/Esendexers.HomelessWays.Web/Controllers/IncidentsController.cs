@@ -20,7 +20,6 @@ namespace Esendexers.HomelessWays.Web.Controllers
         public async Task<IActionResult> NearbyIncidents(double latitude, double longitude, uint radius)
         {
             var incidents = await _incidentAppService.GetIncidentsAroundLocation(latitude, longitude, radius);
-
             return Ok(incidents);
         }
 
