@@ -37,9 +37,10 @@ namespace Esendexers.HomelessWays.Web.Controllers
                 Latitude = incident.Position.Latitude,
                 Time = DateTime.Now,
                 ImageName = imageName,
-                ImageBytes =  imageBytes
+                ImageBytes = imageBytes
             };
-            return Ok(_incidentAppService.RecordNewIncident(newIncidentInput));
+            _incidentAppService.RecordNewIncident(newIncidentInput);
+            return Ok();
         }
     }
 }

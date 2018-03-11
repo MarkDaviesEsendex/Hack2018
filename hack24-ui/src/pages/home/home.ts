@@ -46,6 +46,7 @@ export class HomePage {
                                           this.imageBase64.replace('data:image/jpeg;base64', '') :
                                           this.imageBase64;
 
+
               const incidentModel = new IncidentModel(this.imageBase64, position, this.description);
               this.incidentHttpService.RecordIncident(incidentModel, spinner).then((status) => {
                 this.status = status.toString();

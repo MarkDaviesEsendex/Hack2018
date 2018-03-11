@@ -13,6 +13,10 @@
     <ion-img class="rotate90" [src]="imageBase64"></ion-img>
     <button ion-button secondary class="take-picture" (click)="takePicture()">Take a picture</button>
   </div>
+  <h3>Welcome to HomelessWays!</h3>
+  <div class="image-container">
+    <img src="{{'data:image/jpeg;base64,' + imageBase64}}" class="rotate90" *ngIf="imageBase64">
+  </div>
   <hr>
   <div class="row">
     <label for="incidentDescription">Description</label>
