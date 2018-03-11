@@ -24,26 +24,22 @@ namespace Esendexers.HomelessWays.Web.Controllers
         }
 
         [HttpPost]
-        public IActionResult RecordIncident([FromBody]IncidentModel incident)
+        public async Task<IActionResult> RecordIncident([FromBody]IncidentModel incident)
         {
-            Task.Run(async () =>
-            {
-                var imageName = $"{Guid.NewGuid().ToString()}.jpg";
-                var imageBytes = Convert.FromBase64String(incident.Image);
+            var imageName = $"{Guid.NewGuid().ToString()}.jpg";
+            var imageBytes = Convert.FromBase64String(incident.Image);
 
-                await _imageStorageService.UploadImageBytes(imageName, imageBytes);
-                var newIncidentInput = new CreateIncidentInput
-                {
-                    Description = incident.Description,
-                    Longitude = incident.Position.Longitude,
-                    Latitude = incident.Position.Latitude,
-                    Time = DateTime.Now,
-                    ImageName = imageName,
-                    ImageBytes = imageBytes
-                };
-                _incidentAppService.RecordNewIncident(newIncidentInput);
-            });
-            
+            await _imageStorageService.UploadImageBytes(imageName, imageBytes);
+            var newIncidentInput = new CreateIncidentInput
+            {
+                Description = incident.Description,
+                Longitude = incident.Position.Longitude,
+                Latitude = incident.Position.Latitude,
+                Time = DateTime.Now,
+                ImageName = imageName,
+                ImageBytes = imageBytes
+            };
+            _incidentAppService.RecordNewIncident(newIncidentInput);
             return Ok();
         }
     }
