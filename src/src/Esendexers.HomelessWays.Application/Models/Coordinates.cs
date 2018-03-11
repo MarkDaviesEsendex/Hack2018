@@ -1,6 +1,4 @@
-﻿using Abp.AutoMapper;
-
-namespace Esendexers.HomelessWays.Models
+﻿namespace Esendexers.HomelessWays.Models
 {
     public class Coordinates
     {

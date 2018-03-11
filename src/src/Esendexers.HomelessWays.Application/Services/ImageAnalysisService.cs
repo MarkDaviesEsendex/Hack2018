@@ -20,14 +20,20 @@ namespace Esendexers.HomelessWays.Services
             var client = new HttpClient();
             client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", SubscriptionKey);
 
-            const string uri = UriBase + "?visualFeatures=Categories,Description,Color&language=en";
+            // Request parameters. A third optional parameter is "details".
+            const string requestParameters = "visualFeatures=Categories,Description,Color&language=en";
+
+            // Assemble the URI for the REST API Call.
+            const string uri = UriBase + "?" + requestParameters;
+
 
             using (var content = new ByteArrayContent(imageBytes))
             {
                 content.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
                 var response = await client.PostAsync(uri, content);
+                var contentString = await response.Content.ReadAsStringAsync();
 
-                return JsonConvert.DeserializeObject<ImageAnalysisResult>(await response.Content.ReadAsStringAsync());
+                return JsonConvert.DeserializeObject<ImageAnalysisResult>(contentString);
             }
         }
     }

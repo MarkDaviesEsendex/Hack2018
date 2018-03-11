@@ -30,7 +30,6 @@ namespace Esendexers.HomelessWays.Web.Controllers
             var imageBytes = Convert.FromBase64String(incident.Image);
 
             await _imageStorageService.UploadImageBytes(imageName, imageBytes);
-
             var newIncidentInput = new CreateIncidentInput
             {
                 Description = incident.Description,
