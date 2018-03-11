@@ -3,24 +3,28 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>Welcome to City Saves</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+  <h3>Report an incident</h3>
+  <div class="row image-container">
+    <ion-img class="rotate90" [src]="imageBase64"></ion-img>
+    <button ion-button secondary class="take-picture" (click)="takePicture()">Take a picture</button>
+  </div>
   <h3>Welcome to HomelessWays!</h3>
   <div class="image-container">
-    <img [src]="imageBase64" class="rotate90" *ngIf="imageBase64">
+    <img src="{{'data:image/jpeg;base64,' + imageBase64}}" class="rotate90" *ngIf="imageBase64">
   </div>
+  <hr>
   <div class="row">
-      <textarea [(ngModel)]="description"></textarea>
+    <label for="incidentDescription">Description</label>
+    <textarea id="incidentDescription" [(ngModel)]="description"></textarea>
+    <p class="hint">Provide a short description of the incident so we can investigate</p>
   </div>
-  <div class="row">
-    <div class="col">
-        <button ion-button secondary (click)="takePicture()">Take a picture</button>
-    </div>
-    <div class="col">
-        <button ion-button secondary *ngIf="displaySubmit()" (click)="submit()">Submit</button>
-    </div>
-  </div>
+  <button ion-button *ngIf="!displaySubmit()" disabled>Submit</button>
+  <button ion-button secondary *ngIf="displaySubmit()" (click)="submit()">Submit</button>
+  <p *ngIf="status === 'Success'" class="success">Your incident was received!</p>
+  <p *ngIf="status === 'Error'" class="error">We had an error receiving your incident.</p>
 </ion-content>
