@@ -57,8 +57,8 @@ namespace Esendexers.HomelessWays.Web.Controllers
             var imageName = $"{Guid.NewGuid().ToString()}.jpg";
             var imageStream = new MemoryStream();
             incidentViewModel.File.CopyTo(imageStream);
+            imageStream.Position = 0;
 
-            await _imageStorageService.UploadImageBytes(imageName, imageStream.GetAllBytes());
             var newIncidentInput = new CreateIncidentInput
             {
                 Description = incidentViewModel.Description,
@@ -66,10 +66,25 @@ namespace Esendexers.HomelessWays.Web.Controllers
                 Latitude = incidentViewModel.Latitude,
                 Time = DateTime.Now,
                 ImageName = imageName,
-                ImageBytes = imageStream.GetAllBytes()
+                ImageBytes = ReadFully(imageStream)
             };
             _incidentAppService.RecordNewIncident(newIncidentInput);
+            await _imageStorageService.UploadImageBytes(imageName, imageStream.GetAllBytes());
             return View("Index");
+        }
+
+        public static byte[] ReadFully(Stream input)
+        {
+            var buffer = new byte[16 * 1024];
+            using (var ms = new MemoryStream())
+            {
+                int read;
+                while ((read = input.Read(buffer, 0, buffer.Length)) > 0)
+                {
+                    ms.Write(buffer, 0, read);
+                }
+                return ms.ToArray();
+            }
         }
     }
 }
