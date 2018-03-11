@@ -25,8 +25,6 @@ namespace Esendexers.HomelessWays.Services
 
             // Assemble the URI for the REST API Call.
             const string uri = UriBase + "?" + requestParameters;
-
-
             using (var content = new ByteArrayContent(imageBytes))
             {
                 content.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
