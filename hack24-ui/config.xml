@@ -89,4 +89,10 @@
     <plugin name="cordova-plugin-statusbar" spec="^2.4.1" />
     <allow-navigation href="http://192.168.252.195:8100" />
     <engine name="android" spec="7.0.0" />
+    <plugin name="cordova-plugin-googlemaps" spec="^2.2.5">
+        <variable name="API_KEY_FOR_ANDROID" value="AIzaSyDU11h2rD3KF3rOfQW_dxnjeFl3WXE-LAQ" />
+        <variable name="API_KEY_FOR_IOS" value="AIzaSyDU11h2rD3KF3rOfQW_dxnjeFl3WXE-LAQ" />
+        <variable name="PLAY_SERVICES_VERSION" value="11.8.0" />
+        <variable name="ANDROID_SUPPORT_V4_VERSION" value="24.1.0" />
+    </plugin>
 </widget>

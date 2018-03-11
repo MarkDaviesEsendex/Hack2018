@@ -72,9 +72,6 @@
                 <ul class="nav navbar-nav">
                     @await Component.InvokeAsync(typeof(TopMenuViewComponent), new { activeMenu = ViewBag.ActiveMenu })
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    @await Component.InvokeAsync(typeof(LanguageSelectionViewComponent))
-                </ul>
             </div>
         </div>
     </div>

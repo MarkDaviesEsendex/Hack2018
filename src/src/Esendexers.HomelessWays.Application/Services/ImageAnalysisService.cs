@@ -7,7 +7,7 @@ namespace Esendexers.HomelessWays.Services
 {
     public interface IImageAnalysisService
     {
-        Task<ImageAnalysisResult> Main(byte[] imageBytes);
+        Task<ImageAnalysisResult> AnalyzeImage(byte[] imageBytes);
     }
 
     public class ImageAnalysisService : HomelessWaysAppServiceBase, IImageAnalysisService
@@ -15,7 +15,7 @@ namespace Esendexers.HomelessWays.Services
         private const string SubscriptionKey = "63cde587f23a4085bb077d4627384733";
         private const string UriBase = "https://westcentralus.api.cognitive.microsoft.com/vision/v1.0/analyze";
 
-        public async Task<ImageAnalysisResult> Main(byte[] imageBytes)
+        public async Task<ImageAnalysisResult> AnalyzeImage(byte[] imageBytes)
         {
             var client = new HttpClient();
             client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", SubscriptionKey);
