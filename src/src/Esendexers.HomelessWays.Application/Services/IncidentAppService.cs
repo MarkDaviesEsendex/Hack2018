@@ -24,6 +24,7 @@ namespace Esendexers.HomelessWays.Services
     {
         private readonly ILanguageAnalysysService _languageAnalysys;
         private readonly IImageAnalysisService _imageAnalysisService;
+        private IImageStorageService _imageStorageService;
 
         private readonly IRepository<Incident> _incidentRepository;
         private readonly IRepository<Image> _imageRepository;
@@ -32,7 +33,7 @@ namespace Esendexers.HomelessWays.Services
 
         private readonly IObjectMapper _objectMapper;
 
-        public IncidentAppService(ILanguageAnalysysService languageAnalysys, IRepository<Incident> incidentRepository, IObjectMapper objectMapper, IRepository<Tag> tagRepository, IRepository<IncidentTag> incidentTagRepository, IRepository<Image> imageRepository, IImageAnalysisService imageAnalysisService)
+        public IncidentAppService(ILanguageAnalysysService languageAnalysys, IRepository<Incident> incidentRepository, IObjectMapper objectMapper, IRepository<Tag> tagRepository, IRepository<IncidentTag> incidentTagRepository, IRepository<Image> imageRepository, IImageAnalysisService imageAnalysisService, IImageStorageService imageStorageService)
         {
             _languageAnalysys = languageAnalysys;
             _incidentRepository = incidentRepository;
@@ -41,6 +42,7 @@ namespace Esendexers.HomelessWays.Services
             _incidentTagRepository = incidentTagRepository;
             _imageRepository = imageRepository;
             _imageAnalysisService = imageAnalysisService;
+            _imageStorageService = imageStorageService;
         }
 
         public bool RecordNewIncident(CreateIncidentInput incidentRequest)
@@ -126,7 +128,7 @@ namespace Esendexers.HomelessWays.Services
             if (returnMe != null)
             {
                 returnMe.ImagePath = (await _imageRepository.GetAllListAsync()).Where(image => image.Id == incident.ImageId)
-                    .Select(image => image.ImagePath).FirstOrDefault();
+                    .Select(image => _imageStorageService.GetImageLink(image.ImagePath)).FirstOrDefault();
             }
 
             return returnMe;
