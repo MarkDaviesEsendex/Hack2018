@@ -24,6 +24,7 @@ namespace Esendexers.HomelessWays.Services
     {
         private readonly ILanguageAnalysysService _languageAnalysys;
         private readonly IImageAnalysisService _imageAnalysisService;
+        private IImageStorageService _imageStorageService;
 
         private readonly IRepository<Incident> _incidentRepository;
         private readonly IRepository<Image> _imageRepository;
@@ -32,7 +33,7 @@ namespace Esendexers.HomelessWays.Services
 
         private readonly IObjectMapper _objectMapper;
 
-        public IncidentAppService(ILanguageAnalysysService languageAnalysys, IRepository<Incident> incidentRepository, IObjectMapper objectMapper, IRepository<Tag> tagRepository, IRepository<IncidentTag> incidentTagRepository, IRepository<Image> imageRepository, IImageAnalysisService imageAnalysisService)
+        public IncidentAppService(ILanguageAnalysysService languageAnalysys, IRepository<Incident> incidentRepository, IObjectMapper objectMapper, IRepository<Tag> tagRepository, IRepository<IncidentTag> incidentTagRepository, IRepository<Image> imageRepository, IImageAnalysisService imageAnalysisService, IImageStorageService imageStorageService)
         {
             _languageAnalysys = languageAnalysys;
             _incidentRepository = incidentRepository;
@@ -41,6 +42,7 @@ namespace Esendexers.HomelessWays.Services
             _incidentTagRepository = incidentTagRepository;
             _imageRepository = imageRepository;
             _imageAnalysisService = imageAnalysisService;
+            _imageStorageService = imageStorageService;
         }
 
         public bool RecordNewIncident(CreateIncidentInput incidentRequest)
@@ -128,16 +130,28 @@ namespace Esendexers.HomelessWays.Services
             var incidentCoordinate = new GeoCoordinate(double.Parse(incident.Latitude), double.Parse(incident.Longitude));
             var returnMe = currentCoordinate.GetDistanceTo(incidentCoordinate) < radius ? _objectMapper.Map<IncidentDto>(incident) : null;
             if (returnMe != null)
-                returnMe.ImagePath = (await _imageRepository.GetAsync(incident.ImageId)).ImagePath;
+            {
+                returnMe.ImagePath = (await _imageRepository.GetAllListAsync()).Where(image => image.Id == incident.ImageId)
+                    .Select(image => _imageStorageService.GetImageLink(image.ImagePath)).FirstOrDefault();
+            }
 
             return returnMe;
         }
 
-//        private async Task<IncidentDto> Map(Incident incidentToMap)
-//        {
-//            var imagePath = (await _imageRepository.GetAsync(incidentToMap.ImageId)).ImagePath;
-//
-//            return new
-//        }
+        private async Task<IncidentDto> Map(Incident incidentToMap)
+        {
+            var imagePath = _imageStorageService.GetImageLink((await _imageRepository.GetAsync(incidentToMap.ImageId)).ImagePath);
+
+            return new IncidentDto
+            {
+                Id = incidentToMap.Id,
+                Description = incidentToMap.Description,
+                ImagePath = imagePath,
+                Latitude = double.Parse(incidentToMap.Latitude),
+                Longitude = double.Parse(incidentToMap.Longitude),
+                Time = incidentToMap.Time,
+                PositivitySentimentScore = incidentToMap.PositivitySentimentScore
+            };
+        }
     }
 }
