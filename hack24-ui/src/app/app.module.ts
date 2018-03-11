@@ -7,7 +7,6 @@ import { GoogleMaps } from '@ionic-native/google-maps';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -16,24 +15,24 @@ import { GeolocationProvider } from '../providers/geolocation/geolocation';
 import { IncidentHttpProvider } from '../providers/incident-http/incident-http';
 import { HttpClientModule } from '@angular/common/http';
 import { GoogleMapsProvider } from '../providers/google-maps/google-maps';
+import { MapPage } from '../pages/map/map';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    MapPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     HttpClientModule
-
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    MapPage
   ],
   providers: [
     StatusBar,

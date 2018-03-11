@@ -21,7 +21,9 @@ export class GoogleMapsProvider {
 
   async loadMap(mapId : string) : Promise<GoogleMap> {
     const location = await this.geolocation.getLocation();
+    console.log('[MAP] Got location');
     const markers = await this.getMarkers(location.coords);
+    console.log('[MAP] Got markers');
     const mapOptions: GoogleMapOptions = {
       camera: {
         target: {
@@ -34,10 +36,12 @@ export class GoogleMapsProvider {
     };
 
     const map = GoogleMaps.create(mapId, mapOptions);
-
+    console.log('[MAP] Reached end before promise');
+    console.log(`[MAP] ${JSON.stringify(map)}`);
     // Wait the MAP_READY before using any methods.
-    return map.one(GoogleMapsEvent.MAP_READY)
+    await map.one(GoogleMapsEvent.MAP_READY)
       .then(() => {
+        console.log('[MAP] Creating da markerrrrrs');
         for (let marker of markers) {
           map.addMarker({
               title: marker.description,
@@ -49,15 +53,16 @@ export class GoogleMapsProvider {
               }
             })
             .then(mark => {
+              console.log('[MAP] Created marker ple');
               mark.on(GoogleMapsEvent.MARKER_CLICK)
                 .subscribe(() => {
                   console.log('clicked a marker');
                 });
             });
         }
-        
-        return map;
       });
+
+      return map;
   }
 
   private async getMarkers(coords : Coordinates) : Promise<MapMarker[]> {
@@ -65,12 +70,14 @@ export class GoogleMapsProvider {
       `${constants.ApiBaseUrl}incidents/nearbyincidents?latitude=${coords.latitude}&longitude=${coords.longitude}&radius=${5000}`)
       .toPromise();
 
+    console.log('[MAP] Done do did the load');
     let markers = [];
 
     for (let dto of markerDtOs.result) {
       markers.push(new MapMarker(dto));
     }
 
+    console.log(`[MAP] Done do did the markers: ${markers}`);
     return markers;
   }
 }
