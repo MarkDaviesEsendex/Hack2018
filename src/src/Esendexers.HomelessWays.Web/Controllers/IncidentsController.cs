@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Esendexers.HomelessWays.DTOs;
 using Esendexers.HomelessWays.Services;
+using Esendexers.HomelessWays.Web.Models.Incidents;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Esendexers.HomelessWays.Web.Controllers
@@ -37,8 +38,23 @@ namespace Esendexers.HomelessWays.Web.Controllers
         public async Task<IActionResult> IncidentsWithTag(string tag)
         {
             var incidents = await _incidentAppService.GetIncidentsWithTag(tag);
-
             return Ok(incidents);
+        }
+
+        public IActionResult Index() 
+            => View();
+
+        [HttpPost]
+        public IActionResult Create([FromForm]IncidentViewModel incidentViewModel)
+        {
+            if (incidentViewModel.Description.ToLower().Contains("space") &&
+                incidentViewModel.Description.ToLower().Contains("invader"))
+            {
+                return RedirectToAction("Index", "Invaders");
+            }
+
+
+            return View("Index");
         }
     }
 }
